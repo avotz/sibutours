@@ -23,9 +23,52 @@ if ( ! defined( 'ABSPATH' ) ) {
 global $product;
 
 ?>
+    
+<div class="tour-header-group-1">
+	<div class="tour-header-meta-wrapper">
+		<div class="tour-meta tour-meta-price">
+
+		    <span class="tour-meta-header">
+		    	 <?php  if(get_locale() == "es_ES"){?>
+                 Hora de salida:
+               <?php } if(get_locale() == "en_US") {?>
+                Departure Time:
+               <?php } if(get_locale() == "fr_FR") {?>
+                Heure de départ:
+                <?php } ?>
+		    	
+		    </span>
+		    <span class="tour-meta-content"><?php echo get_post_meta( $product->get_id(), 'departure_time', true ); ?></span>
+		 </div>
+		 <div class="tour-meta tour-meta-price">
+		    <span class="tour-meta-header">
+		    	 <?php  if(get_locale() == "es_ES"){?>
+                Hora de regreso:
+               <?php } if(get_locale() == "en_US") {?>
+                Return Time:
+               <?php } if(get_locale() == "fr_FR") {?>
+                Heure de retour:
+                <?php } ?>
+
+		     </span>
+		    <span class="tour-meta-content"><?php echo get_post_meta( $product->get_id(), 'return_time', true ); ?></span>
+		 </div>
+	</div>
+</div>
+
 <div class="tour-header-group-2">
     <div class="tour-header-book-now-wrapper">
-      <a href="#tour-popup" class="btn success tour-popup-link" data-title="<?php echo $product->get_name(); ?>">inquery Now</a>
+      <a href="#tour-popup" class="btn success tour-popup-link" data-title="<?php echo $product->get_slug(); ?>">
+	   <?php  if(get_locale() == "es_ES"){?>
+        Consulta ahora
+       <?php } if(get_locale() == "en_US") {?>
+       inquery now
+       <?php } if(get_locale() == "fr_FR") {?>
+       Enquête maintenant
+        <?php } ?>
+      
+
+      </a>
        <!-- <p class="price"><?php echo $product->get_price_html(); ?></p> -->
     </div>
   </div>

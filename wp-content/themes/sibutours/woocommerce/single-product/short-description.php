@@ -28,7 +28,16 @@ if ( ! $post->post_excerpt ) {
 
 ?>
 <div class="product-description-accordion">
- <h2 class="product-description-accordion-button"><i class="fa fa-angle-down"></i> Description <i class="fa fa-angle-down"></i></h2>
+ <h2 class="product-description-accordion-button">
+ <i class="fa fa-angle-down"></i> 
+ 	 <?php  if(get_locale() == "es_ES"){?>
+        Descripción
+       <?php } if(get_locale() == "en_US") {?>
+        Description
+       <?php } if(get_locale() == "fr_FR") {?>
+        La description
+        <?php } ?>
+ <i class="fa fa-angle-down"></i></h2>
  <div class="product-description-accordion-content">
 	<?php echo apply_filters( 'woocommerce_short_description', $post->post_excerpt ); ?>
  </div>

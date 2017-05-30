@@ -31,9 +31,9 @@ $category = $categorySelected[0];
 get_header(); 
 
 ?>
-
+<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="fp-controlArrow fp-prev" style="left: 15px;width: 0;border-width: 38.5px 34px 38.5px 0;border-color: transparent #fff transparent transparent;color: #666;"></a>
 <div class="slide slide-2 slide__category " data-anchor="discover" >
-
+<div class="fp-scrollable">
  <div class="slide__container">
         <div class="row">
             <div class="column column-2">
@@ -99,7 +99,16 @@ get_header();
                                             </div>
                                             <div class="entry-excerpt-wrapper">
                                            <?php echo word_count(get_the_excerpt(), '24'); ?>
-                                            <a href="<?php the_permalink(); ?>" class="button">View Tour</a>
+                                            <a href="<?php the_permalink(); ?>" class="button">
+                                               <?php  if(get_locale() == "es_ES"){?>
+                                                Ver tour
+                                               <?php } if(get_locale() == "en_US") {?>
+                                               View Tour
+                                               <?php } if(get_locale() == "fr_FR") {?>
+                                               Voir le tour
+                                                <?php } ?>
+                                              
+                                            </a>
                                             </div>
                                         </div>
                                     </div>
@@ -118,6 +127,7 @@ get_header();
              </div>
         </div>
      
+ </div>
  </div>
 </div>
 <?php wp_footer(); ?>

@@ -53,7 +53,14 @@
                             <ul class="main__menu__list">
                                 <li class="main__menu__item home">
                                 <span class="hide-for-small-only">
+                                <?php  if(get_locale() == "es_ES"){?>
+                                 <a href="./">Experiencia lo mejor de Sibu Tours</a>
+                               <?php } if(get_locale() == "en_US") {?>
                                 <a href="./">Experience the best of Sibu Tours</a>
+                               <?php } if(get_locale() == "fr_FR") {?>
+                                 <a href="./">Experience the best of Sibu Tours</a>
+                                <?php } ?>
+                               
                                 </span>
                                 <span class="show-for-small-only">&nbsp;</span>
                                 </li>
@@ -67,7 +74,15 @@
                              foreach ($categories as $key => $category) {  ?>
                                  
                                  <li class="main__menu__item">
-                                    <a href="/product-category/<?php echo $category->slug ?>">Discover <?php echo $category->name ?></a>
+                                    <a href="/tour-category/<?php echo $category->slug ?>">
+                                       <?php  if(get_locale() == "es_ES"){?>
+                                        Descubre <?php echo $category->name ?>
+                                       <?php } if(get_locale() == "en_US") {?>
+                                        Discover <?php echo $category->name ?>
+                                       <?php } if(get_locale() == "fr_FR") {?>
+                                        Discover <?php echo $category->name ?>
+                                        <?php } ?>
+                                      </a>
                                     <div class="fp-controlArrow fp-next"></div>
                                  </li>
                             <?php } ?>

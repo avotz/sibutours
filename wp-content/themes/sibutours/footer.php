@@ -12,14 +12,31 @@
 ?>
 
 	<footer class="footer">
-            
+            <div class="languages">
+            	<a href="<?php echo esc_url( home_url( '/en' ) ); ?>">EN</a>
+            	<a href="<?php echo esc_url( home_url( '/es' ) ); ?>">ES</a>
+            	<a href="<?php echo esc_url( home_url( '/fr' ) ); ?>">FR</a>
+            </div>
     </footer>
 
     <div id="transfer-popup" class="request-popup white-popup mfp-hide mfp-with-anim">               
-	    <?php echo do_shortcode('[contact-form-7 id="33" title="Book Transfer"]') ?>
+	    <?php  if(get_locale() == "es_ES"){
+         echo do_shortcode('[contact-form-7 id="196" title="Book Transfer ES"]');
+        } if(get_locale() == "en_US") {
+         echo do_shortcode('[contact-form-7 id="33" title="Book Transfer"]') ;
+       } if(get_locale() == "fr_FR") {
+          echo do_shortcode('[contact-form-7 id="197" title="Book Transfer FR"]'); 
+        } ?> 
 	</div>
-	<div id="tour-popup" class="request-popup white-popup mfp-hide mfp-with-anim">               
-	    <?php echo do_shortcode('[contact-form-7 id="32" title="Book Tour"]') ?>
+	<div id="tour-popup" class="request-popup white-popup mfp-hide mfp-with-anim">
+		<?php  if(get_locale() == "es_ES"){
+         echo do_shortcode('[contact-form-7 id="184" title="Book Tour ES"]');
+        } if(get_locale() == "en_US") {
+         echo do_shortcode('[contact-form-7 id="32" title="Book Tour"]') ;
+       } if(get_locale() == "fr_FR") {
+          echo do_shortcode('[contact-form-7 id="185" title="Book Tour FR"]'); 
+        } ?>               
+	    
 	</div>
 
 <?php wp_footer(); ?>

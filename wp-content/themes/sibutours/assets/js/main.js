@@ -458,17 +458,17 @@ function set_destination_scrolled(delta) {
         
           $.ajax({
                 type: 'GET',
-                url: '/sibutourscostarica/api/get_posts/?post_type=product',//'/api/get_post/?id='+ post_id +'&post_type=tour',
+                url: '/api/get_posts/?post_type=product&count=-1',//'/api/get_post/?id='+ post_id +'&post_type=tour',
                 
                 success: function(data){
-                   // console.log(data)
+                    console.log(data)
 
                     var items = [];
 
                 var select = $('select[name="tours[]"]').empty();
                 $.each(data.posts, function(i,item) {
                   select.append( '<option value="'
-                                       + $.trim(item.title) + '">'
+                                       + $.trim(item.slug) + '">'
                                        + item.title
                                        + '</option>' ); 
 
@@ -503,7 +503,7 @@ function set_destination_scrolled(delta) {
       
       
       //console.log($(this).data('activitie'))
-      $('#transfer-popup').find('select[name="shuttle"] option[value="'+ $(this).attr('data-title') +'"]').attr("selected",true).change();
+      $('#transfer-popup').find('select[name="destination"] option[value="'+ $(this).attr('data-title') +'"]').attr("selected",true).change();
 
 
       
@@ -544,6 +544,10 @@ $(window).resize(resizes);
                $('.page-content').slimScroll({
                 height: $('.page-media').height() - 50
               });
+              $('.slide__category .fp-scrollable').slimScroll({
+                 height: getWindowHeight()
+               });
+              
 
          }else {
            
@@ -554,6 +558,10 @@ $(window).resize(resizes);
                $('.page-content').slimScroll({
                 height: '400px'
               });
+
+              /*$('.slide__category .fp-scrollable').slimScroll({
+                 height: '400px'
+               });*/
          }
     }
      function responsive() {
