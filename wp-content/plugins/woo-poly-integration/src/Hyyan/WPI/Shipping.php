@@ -12,6 +12,7 @@ namespace Hyyan\WPI;
 
 use Hyyan\WPI\Admin\Settings;
 use Hyyan\WPI\Admin\Features;
+use Hyyan\WPI\Utilities;
 
 /**
  * Shipping.
@@ -48,7 +49,7 @@ class Shipping
 
         // Register woocommerce shipping method custom names in polylang strings translations table
         // called only after Wordpress is loaded
-        add_action('wp_loaded', array($this, 'registerShippingStringsForTranslation')); 
+        add_action('wp_loaded', array($this, 'registerShippingStringsForTranslation'));
 
         // Shipping method in the Cart and Checkout pages
         add_filter('woocommerce_shipping_rate_label', array($this, 'translateShippingLabel'), 10, 1);
@@ -135,9 +136,9 @@ class Shipping
 
         // Rest of the World zone
         $zone = new \WC_Shipping_Zone();
-        $zones[ $zone->get_zone_id() ] = $zone->get_data();
-        $zones[ $zone->get_zone_id() ]['formatted_zone_location'] = $zone->get_formatted_location();
-        $zones[ $zone->get_zone_id() ]['shipping_methods'] = $zone->get_shipping_methods();
+        $zones[ $zone->get_id() ] = $zone->get_data();
+        $zones[ $zone->get_id() ]['formatted_zone_location'] = $zone->get_formatted_location();
+        $zones[ $zone->get_id() ]['shipping_methods'] = $zone->get_shipping_methods();
 
         // Add user configured zones
         $zones = array_merge($zones, \WC_Shipping_Zones::get_zones());

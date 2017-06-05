@@ -52,9 +52,9 @@ class Stock
         $items = $order->get_items();
 
         /* Reduce stock */
-        foreach ($items as $item) {
-            $this->change($item, self::STOCK_REDUCE_ACTION);
-        }
+                    foreach ($items as $item) {
+                        $this->change($item, self::STOCK_REDUCE_ACTION);
+                    }
     }
 
     /**
@@ -73,12 +73,10 @@ class Stock
         $items = $order->get_items();
 
         /* Increase stock */
-        foreach ($items as $item) {
-            $item['change'] = $change;
-            $this->change($item, self::STOCK_INCREASE_ACTION);
-        }
-
-        return $change;
+                    foreach ($items as $item) {
+                        $item->change = $change;
+                        $this->change($item, self::STOCK_INCREASE_ACTION);
+                    }
     }
 
     /**
@@ -87,13 +85,13 @@ class Stock
      * @param array  $item   the order data
      * @param string $action STOCK_REDUCE_ACTION | STOCK_INCREASE_ACTION
      */
-    protected function change(array $item, $action = self::STOCK_REDUCE_ACTION)
-    {
-        $productID = $item['product_id'];
-        $productObject = wc_get_product($productID);
-        $productLang = pll_get_post_language($productID);
+protected function change(\WC_Order_Item_Product $item, $action = self::STOCK_REDUCE_ACTION)
+{
+    $productID = Utilities::get_order_item_productid($item);
+    $productObject = wc_get_product($productID);
+    $productLang = pll_get_post_language($productID);
 
-        $variationID = $item['variation_id'];
+    $variationID = Utilities::get_order_item_variationid($item);
 
         /* Handle Products */
         if ($productObject && $productLang) {
@@ -109,11 +107,11 @@ class Stock
             $isManageStock = $productObject->managing_stock();
             $isVariation = $variationID && $variationID > 0;
             $method = ($action === self::STOCK_REDUCE_ACTION) ?
-                    'reduce_stock' :
-                    'increase_stock';
+                    'decrease' :
+                    'increase';
             $change = ($action === self::STOCK_REDUCE_ACTION) ?
-                    $item['qty'] :
-                    $item['change'];
+              Utilities::get_order_item_quantity($item) :
+                  Utilities::get_order_item_change($item);
 
             /* Sync stock for all translation */
             foreach ($translations as $ID) {
@@ -121,7 +119,7 @@ class Stock
                 /* Only if product is managing stock */
                 if ($isManageStock) {
                     if (($translation = wc_get_product($ID))) {
-                        $translation->$method($change);
+                        \wc_update_product_stock($translation, $change, $method);
                     }
                 }
 
@@ -135,8 +133,11 @@ class Stock
                 }
             }
 
-            /* Handle variation */
-            if ($isVariation) {
+            /* Handle variation stock UNLESS stock is managed on the parent
+                         * there is a function for this $variation->get_stock_managed_by_id() however in woo-poly-context
+                         * this returns the master language id of either the variation of the parent.
+                         */
+            if (($isVariation) && !($isManageStock)) {
                 $posts = Variation::getRelatedVariation($variationID);
                 foreach ($posts as $post) {
                     if ($post->ID == $variationID) {
@@ -144,10 +145,10 @@ class Stock
                     }
                     $variation = wc_get_product($post);
                     if ($variation && $variation->managing_stock()) {
-                        $variation->$method($change);
+                        \wc_update_product_stock($variation, $change, $method);
                     }
                 }
             }
         }
-    }
+}
 }

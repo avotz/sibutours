@@ -102,10 +102,13 @@ class Settings extends \WeDevs_Settings_API
     {
         $options = get_option($section);
 
-        if (isset($options[$option])) {
+        if (!empty($options[$option])) {  // equivalent to: isset($options[$option]) && $options[$option]
             return $options[$option];
+        }   // when all settings are disabled
+        elseif (isset($options[$option])) {
+            return array();
+        } else {
+            return $default;
         }
-
-        return $default;
     }
 }

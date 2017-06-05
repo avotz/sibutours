@@ -63,6 +63,19 @@ class Plugin
         FlashMessages::add(
                 MessagesInterface::MSG_SUPPORT, static::getView('Messages/support')
         );
+        
+        add_filter('plugin_action_links_woo-poly-integration/__init__.php', function ($links) {
+            $baseURL = is_multisite() ? get_admin_url() : admin_url();
+            $settingsLink = array(
+                '<a href="'
+                . $baseURL
+                . 'options-general.php?page=hyyan-wpi">'
+                . __('Settings', ' woo-poly-integration')
+                . '</a>'
+            );
+            
+            return array_merge($links, $settingsLink);
+        });
 
         $this->registerCore();
     }
@@ -92,7 +105,7 @@ class Plugin
         /* check woocommerce plugin * */
         if (
                is_plugin_active('woocommerce/woocommerce.php') ||
-               is_plugin_active_for_network('woocommerce/woocommerce.php') 
+               is_plugin_active_for_network('woocommerce/woocommerce.php')
           ) {
             $woocommerce = true;
         }
@@ -156,5 +169,6 @@ class Plugin
         new Gateways();
         new Shipping();
         new Breadcrumb();
+        new Tax();
     }
 }
