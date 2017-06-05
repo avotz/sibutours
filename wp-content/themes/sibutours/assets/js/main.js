@@ -458,7 +458,7 @@ function set_destination_scrolled(delta) {
         
           $.ajax({
                 type: 'GET',
-                url: '/api/get_posts/?post_type=product&count=-1',//'/api/get_post/?id='+ post_id +'&post_type=tour',
+                url: '/sibutourscostarica/api/get_posts/?post_type=product&count=-1',//'/api/get_post/?id='+ post_id +'&post_type=tour',
                 
                 success: function(data){
                     console.log(data)
