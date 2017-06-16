@@ -11,16 +11,21 @@ if (!defined('ABSPATH')) {
 <p>
     <?php
     _e('The plugin can not function correctly , the plugin requires
-        WooCommerce and Polylang plugins', 'woo-poly-integration'
+        minimum plugin versions WooCommerce version 3 or higher and Polylang 2 or higher.
+        Please configure Polylang by adding a language before activating WooCommerce Polylang Integration.', 'woo-poly-integration'
     );
+    _e('See also', 'woo-poly-integration');
+    echo('<a href="https://github.com/hyyan/woo-poly-integration/wiki/Installation">');
+    _e('Installation Guide', 'woo-poly-integration');
+    echo('</a>.');
     ?>
 <p>
 <hr>
-<?php _e('Plugins Sites : ', 'woo-poly-integration'); ?>
+<?php _e('Plugins : ', 'woo-poly-integration'); ?>
 <a href="https://wordpress.org/plugins/woocommerce/">
-    <?php _e('WooCommerce', 'woo-poly-integration'); ?>
+    <?php printf('%s V%s', _e('WooCommerce', 'woo-poly-integration'), Hyyan\WPI\Plugin::WOOCOMMERCE_VERSION); ?>
 </a>
 |
 <a href="https://wordpress.org/plugins/polylang/">
-    <?php _e('Polylang', 'woo-poly-integration'); ?>
+    <?php printf('%s V%s', _e('Polylang', 'woo-poly-integration'), Hyyan\WPI\Plugin::POLYLANG_VERSION); ?>
 </a>

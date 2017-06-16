@@ -14,18 +14,39 @@
 	<div class="entry-content">
 		<div class="entry-page-container">
 			<div class="page-media">
-				 <?php if ( has_post_thumbnail() ) :
+				 <div class="owl-carousel">
+
+					 <?php if ( has_post_thumbnail() ) :
 
 	                  $id = get_post_thumbnail_id($post->ID);
 	                  $thumb_url = wp_get_attachment_image_src($id,'tour-gallery', true);
 	                  ?>
 	                  
 	              
-	               <figure class="page-banner" style="background-image: url('<?php echo $thumb_url[0] ?>');">
+	               		<figure class="page-banner tour-banner" style="background-image: url('<?php echo $thumb_url[0] ?>');">
 			
-				</figure>
+						</figure>
 	                
 	              <?php endif; ?>
+		
+					 <?php $images = rwmb_meta( 'rw_gallery_thumb', 'type=image&size=property-thumb' ); 
+		             if ( $images ) : ?>
+		             
+		             	 
+		               
+		                     <?php foreach ( $images as $image ){?>
+
+		                     		<figure class="tour-banner" style="background-image: url('<?php echo $image['url'] ?>');"></figure>
+		                         
+		                      <?php } ?>
+
+		           
+				
+				  	 
+				  	<?php endif; ?>
+					
+				</div>
+
 				
 			</div>
 			<div class="page-info">

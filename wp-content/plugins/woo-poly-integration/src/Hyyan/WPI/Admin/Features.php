@@ -38,7 +38,10 @@ class Features extends AbstractSettings
                 'desc' => __(
                         ' The section will allow you to Enable/Disable
                           Plugin Features.', 'woo-poly-integration'
-                ),
+                ) . ' ' . __(
+                        'For more information please see:', 'woo-poly-integration'
+                ) . ' <a target="_blank" href="https://github.com/hyyan/woo-poly-integration/wiki/Settings---Features"> ' .
+                    __('documentation pages', 'woo-poly-integration') . '</a>.',
             ),
         );
     }
@@ -124,17 +127,7 @@ class Features extends AbstractSettings
                         'Enable attributes translations', 'woo-poly-integration'
                 ),
             ),
-/*
-            array(
-                'name' => 'shipping-class',
-                'type' => 'checkbox',
-                'default' => 'off',
-                'label' => __('Translate Shipping Classes', 'woo-poly-integration'),
-                'desc' => __(
-                        'Enable shipping classes translations'.(Utilities::woocommerceVersionCheck('2.6') ? ' (not supported for WooCommerce versions >= 2.6)' : ''), 'woo-poly-integration'
-                ),
-            ),
- */
+
             array(
                 'name' => 'new-translation-defaults',
                 'type' => 'radio',

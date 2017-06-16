@@ -8661,6 +8661,7 @@ $(".owl-carousel").owlCarousel({
       animateOut: 'fadeOut',
       items : 1,
       autoplay : true,
+      autoplayTimeout: 4000,
       loop : true,
       nav : true,
       navText : ['','']
