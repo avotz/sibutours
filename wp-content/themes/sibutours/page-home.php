@@ -80,7 +80,8 @@ get_header(); ?>
                                                          <?php
                                                             $args = array(
                                                               'post_type' => 'product',
-                                                              'order' => 'ASC',
+                                                              //'order' => 'ASC',
+                                                              'orderby' => array('menu_order' => 'ASC', 'title' => 'ASC'),
                                                               'posts_per_page' => -1,
                                                              'tax_query' => array(
                                                                 array(

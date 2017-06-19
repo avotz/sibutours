@@ -704,6 +704,8 @@
 	],
 	"file_history":
 	[
+		"/D/xampp/htdocs/sibutours/wp-content/themes/sibutours/footer.php",
+		"/D/Documents/dumps/sibutours.sql",
 		"/D/xampp/htdocs/sibutours/wp-content/themes/sibutours/inc/cpt.php",
 		"/D/xampp/htdocs/sibutours/wp-content/themes/sibutours/template-parts/content-page.php",
 		"/D/xampp/htdocs/sibutours/wp-content/themes/sibutours/assets/stylus/main.styl",
@@ -711,13 +713,11 @@
 		"/C/Users/USER/.android/debug.keystore",
 		"/D/xampp/htdocs/sibutours/wp-content/themes/sibutours/functions.php",
 		"/D/xampp/htdocs/sibutours/wp-content/themes/sibutours/template-parts/content-contact.php",
-		"/D/Documents/dumps/sibutours.sql",
 		"/D/xampp/htdocs/sibutours/wp-config.php",
 		"/D/wp-config.php",
 		"/D/xampp/htdocs/sibutours/wp-content/themes/sibutours/page-home.php",
 		"/D/xampp/htdocs/sibutours/wp-content/themes/sibutours/template-parts/menu-home.php",
 		"/D/xampp/htdocs/sibutours/wp-content/themes/sibutours/woocommerce/single-product/price.php",
-		"/D/xampp/htdocs/sibutours/wp-content/themes/sibutours/footer.php",
 		"/D/xampp/htdocs/sibutours/wp-content/themes/sibutours/woocommerce/single-product/short-description.php",
 		"/D/xampp/htdocs/sibutours/wp-content/themes/sibutours/Gulpfile.js",
 		"/D/xampp/htdocs/sibutours/wp-content/themes/sibutours/woocommerce/taxonomy-product_cat.php",
@@ -849,6 +849,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"utf8mb4_unicode_520_ci",
 			"http://sibutours.dev",
 			"utf8mb4_unicode_520_ci",
 			"Reserve",
@@ -975,8 +976,7 @@
 			"data.",
 			"style=\"height: 0px;\"",
 			"(i",
-			"$user->office->",
-			"(isset($user->office)) ? "
+			"$user->office->"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -984,6 +984,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"utf8mb4_unicode_ci",
 			"http://sandbox.avotz.com/sibutourscostarica",
 			"utf8mb4_unicode_ci",
 			"http://sandbox.avotz.com/sibutourscostarica",
@@ -1609,9 +1610,13 @@
 	"select_project":
 	{
 		"height": 500.0,
-		"last_filter": "cons",
+		"last_filter": "gps",
 		"selected_items":
 		[
+			[
+				"gps",
+				"D:\\xampp\\htdocs\\GPSMedica\\GPSMedica.sublime-project"
+			],
 			[
 				"cons",
 				"D:\\xampp\\htdocs\\consulta\\consulta.sublime-project"
