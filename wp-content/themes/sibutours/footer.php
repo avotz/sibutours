@@ -44,7 +44,7 @@
         } if(get_locale() == "en_US") {
          echo do_shortcode('[contact-form-7 id="373" title="Book Lodging"]') ;
        } if(get_locale() == "fr_FR") {
-          echo do_shortcode('[contact-form-7 id="185" title="Book Lodging FR"]'); 
+          echo do_shortcode('[contact-form-7 id="378" title="Book Lodging FR"]'); 
         } ?>               
       
   </div>
