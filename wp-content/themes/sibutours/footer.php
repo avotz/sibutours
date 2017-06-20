@@ -38,6 +38,16 @@
         } ?>               
 	    
 	</div>
+  <div id="lodging-popup" class="request-popup white-popup mfp-hide mfp-with-anim">
+    <?php  if(get_locale() == "es_ES"){
+         echo do_shortcode('[contact-form-7 id="374" title="Book Lodging ES"]');
+        } if(get_locale() == "en_US") {
+         echo do_shortcode('[contact-form-7 id="373" title="Book Lodging"]') ;
+       } if(get_locale() == "fr_FR") {
+          echo do_shortcode('[contact-form-7 id="185" title="Book Lodging FR"]'); 
+        } ?>               
+      
+  </div>
 
 <?php wp_footer(); ?>
 
