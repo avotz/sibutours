@@ -704,8 +704,10 @@
 	],
 	"file_history":
 	[
-		"/D/xampp/htdocs/sibutours/wp-content/themes/sibutours/footer.php",
+		"/D/xampp/htdocs/sibutours/wp-content/themes/sibutours/woocommerce/taxonomy-product_cat.php",
+		"/D/xampp/htdocs/sibutours/wp-content/themes/sibutours/page-home.php",
 		"/D/Documents/dumps/sibutours.sql",
+		"/D/xampp/htdocs/sibutours/wp-content/themes/sibutours/footer.php",
 		"/D/xampp/htdocs/sibutours/wp-content/themes/sibutours/inc/cpt.php",
 		"/D/xampp/htdocs/sibutours/wp-content/themes/sibutours/template-parts/content-page.php",
 		"/D/xampp/htdocs/sibutours/wp-content/themes/sibutours/assets/stylus/main.styl",
@@ -715,12 +717,10 @@
 		"/D/xampp/htdocs/sibutours/wp-content/themes/sibutours/template-parts/content-contact.php",
 		"/D/xampp/htdocs/sibutours/wp-config.php",
 		"/D/wp-config.php",
-		"/D/xampp/htdocs/sibutours/wp-content/themes/sibutours/page-home.php",
 		"/D/xampp/htdocs/sibutours/wp-content/themes/sibutours/template-parts/menu-home.php",
 		"/D/xampp/htdocs/sibutours/wp-content/themes/sibutours/woocommerce/single-product/price.php",
 		"/D/xampp/htdocs/sibutours/wp-content/themes/sibutours/woocommerce/single-product/short-description.php",
 		"/D/xampp/htdocs/sibutours/wp-content/themes/sibutours/Gulpfile.js",
-		"/D/xampp/htdocs/sibutours/wp-content/themes/sibutours/woocommerce/taxonomy-product_cat.php",
 		"/D/xampp/htdocs/sibutours/wp-content/themes/sibutours/header.php",
 		"/D/xampp/htdocs/sibutours/wp-content/themes/sibutours/woocommerce/single-product/related.php",
 		"/D/xampp/htdocs/sibutours/wp-content/themes/sibutours/woocommerce/archive-product.php",
@@ -849,6 +849,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"http://sibutours.dev",
 			"utf8mb4_unicode_520_ci",
 			"http://sibutours.dev",
 			"utf8mb4_unicode_520_ci",
@@ -975,8 +976,7 @@
 			"\"value\":\"\"",
 			"data.",
 			"style=\"height: 0px;\"",
-			"(i",
-			"$user->office->"
+			"(i"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -984,6 +984,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"http://sandbox.avotz.com/sibutourscostarica",
 			"utf8mb4_unicode_ci",
 			"http://sandbox.avotz.com/sibutourscostarica",
 			"utf8mb4_unicode_ci",
@@ -1610,9 +1611,13 @@
 	"select_project":
 	{
 		"height": 500.0,
-		"last_filter": "gps",
+		"last_filter": "cos",
 		"selected_items":
 		[
+			[
+				"cos",
+				"D:\\xampp\\htdocs\\costaricabrokers\\costaricabrokers.sublime-project"
+			],
 			[
 				"gps",
 				"D:\\xampp\\htdocs\\GPSMedica\\GPSMedica.sublime-project"
@@ -1624,10 +1629,6 @@
 			[
 				"plumeri",
 				"D:\\xampp\\htdocs\\plumeria\\plumeria.sublime-project"
-			],
-			[
-				"cos",
-				"D:\\xampp\\htdocs\\costaricabrokers\\costaricabrokers.sublime-project"
 			],
 			[
 				"",
