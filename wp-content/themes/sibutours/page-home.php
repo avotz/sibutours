@@ -37,6 +37,10 @@ get_header(); ?>
                                         
                                       
                                     </div>
+                                    <div class="banner__slide" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/bg-page2.jpg');">
+                                        
+                                      
+                                    </div>
                                 
                                     
                             </div>       
