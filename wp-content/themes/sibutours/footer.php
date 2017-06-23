@@ -12,6 +12,7 @@
 ?>
 
 	<footer class="footer">
+            <span class="copy">Sibutour &copy; <?php echo date('Y');?> </span>
             <div class="languages">
             	<a href="<?php echo esc_url( home_url( '/en' ) ); ?>">EN</a>
             	<a href="<?php echo esc_url( home_url( '/es' ) ); ?>">ES</a>

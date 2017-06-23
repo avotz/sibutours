@@ -2512,3 +2512,27 @@ textarea {
 #CDSWIDSSP {
   width: 100% !important;
 }
+.slimScrollBar {
+  width: 12px !important;
+}
+.footer {
+  background-color: #f9f9f9;
+  height: 48px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+  text-align: center;
+  padding: 0.5rem 0;
+  border-top: 1px solid #ddd;
+}
+.footer span {
+  vertical-align: middle;
+}
+.home .footer {
+  background-color: transparent;
+  border-top: none;
+}
+.home .footer span {
+  display: none;
+}

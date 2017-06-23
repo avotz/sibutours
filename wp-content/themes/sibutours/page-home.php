@@ -41,6 +41,10 @@ get_header(); ?>
                                         
                                       
                                     </div>
+                                     <div class="banner__slide" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/rio-celeste.jpg');">
+                                        
+                                      
+                                    </div>
                                 
                                     
                             </div>       
@@ -133,8 +137,17 @@ get_header(); ?>
                                                                                 </div>
                                                                                 </div>
                                                                                 <div class="entry-excerpt-wrapper">
-                                                                               <?php echo word_count(get_the_excerpt(), '24'); ?>
-                                                                                <a href="<?php the_permalink(); ?>" class="button">View Tour</a>
+                                                                               <?php /*echo word_count(get_the_excerpt(), '24'); */?>
+                                                                                <a href="<?php the_permalink(); ?>" class="button">
+                                                                               <?php  if(get_locale() == "es_ES"){?>
+                                                                                  Ver tour
+                                                                                 <?php } if(get_locale() == "en_US") {?>
+                                                                                 View Tour
+                                                                                 <?php } if(get_locale() == "fr_FR") {?>
+                                                                                 Voir le tour
+                                                                                  <?php } ?>
+                                              
+                                                                                </a>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
