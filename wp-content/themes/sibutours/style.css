@@ -2117,6 +2117,7 @@ textarea {
   -o-transform: translate3d(0, -100%, 0);
   -ms-transform: translate3d(0, -100%, 0);
   transform: translate3d(0, -100%, 0);
+  display: none;
 }
 .main__menu__logo-container img {
   -webkit-transition: all 0.3s cubic-bezier(0.7, 0, 0.3, 1);
@@ -2198,6 +2199,7 @@ textarea {
 .main__menu__big .main__menu__item {
   font-family: "Roboto Slab", serif;
   line-height: 4.5rem;
+  font-size: 1.5rem;
   color: #fff;
 }
 .main__menu__big .main__menu__item a {
@@ -2240,6 +2242,9 @@ textarea {
 @media screen and (min-width: 640px) {
   .main__menu__big .main__menu__item {
     font-size: 3rem;
+  }
+  .main__menu__logo-container {
+    display: block;
   }
 }
 @media screen and (min-width: 800px) {

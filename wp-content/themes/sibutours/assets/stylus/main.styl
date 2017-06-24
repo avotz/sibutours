@@ -425,6 +425,7 @@ textarea
 
 .fp-viewing-home
 	.main__menu__logo-container
+		
 		img
 			transform: translate3d(0,0,0);
 	.main__menu__line
@@ -704,12 +705,14 @@ textarea
 		margin-top -4rem
 		overflow hidden
 		transform translate3d(0,-100%,0)
+		display none
 		
 		img 
 			transition all .3s cubic-bezier(0.7,0,0.3,1)
 			transform: translate3d(0,-105%,0);
 	&__menu__container
 		margin-top -1.5rem
+		
 	&__menu__before
 		overflow hidden
 		position relative
@@ -762,6 +765,7 @@ textarea
 			//font-size 3rem
 			font-family: "Roboto Slab",serif
 			line-height 4.5rem
+			font-size 1.5rem
 			color white
 			a 
 				color white
@@ -788,6 +792,8 @@ textarea
 		&__menu__big
 			.main__menu__item
 				font-size 3rem
+		&__menu__logo-container
+			display block
 			 
 @media screen and (min-width:800px)
 	.main
