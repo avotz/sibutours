@@ -20,7 +20,7 @@
 
 	                  $id = get_post_thumbnail_id($post->ID);
 	                  $big_url = wp_get_attachment_image_src($id,'tour-gallery', true);
-	                  $thumb_url = wp_get_attachment_image_src($id,'medium', true);
+	                  $thumb_url = wp_get_attachment_image_src($id,'large', true);
 	                  ?>
 	                  
 	              		<?php  if(wp_is_mobile()){ ?>
@@ -38,9 +38,9 @@
 		
 					
 					 <?php  if(wp_is_mobile()){ 
-	               		 $images = rwmb_meta( 'rw_gallery_thumb', 'type=image&size=medium' ); 
+	               		 $images = rwmb_meta( 'rw_gallery_thumb', 'type=image&size=large' ); 
 					}else{ 
-						  $images = rwmb_meta( 'rw_gallery_thumb', 'type=image&size=property-thumb' ); 
+						  $images = rwmb_meta( 'rw_gallery_thumb', 'type=image&size=tour-gallery' ); 
 	                    } 
 
 		             if ( $images ) : ?>

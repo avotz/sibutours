@@ -27,7 +27,7 @@ $attachment_ids = $product->get_gallery_image_ids();
 if ( $attachment_ids && has_post_thumbnail() ) {
 	foreach ( $attachment_ids as $attachment_id ) {
 		$full_size_image = wp_get_attachment_image_src( $attachment_id, 'tour-gallery' );
-		$thumbnail       = wp_get_attachment_image_src( $attachment_id, 'medium' );
+		$thumbnail       = wp_get_attachment_image_src( $attachment_id, 'large' );
 		$image_title     = get_post_field( 'post_excerpt', $attachment_id );
 
 		$attributes = array(
