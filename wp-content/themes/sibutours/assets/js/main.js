@@ -580,13 +580,13 @@ $(window).resize(resizes);
 
          }else {
            
-              $('.summary-content').slimScroll({
+              /*$('.summary-content').slimScroll({
                  height: '400px'
-               });
+               });*/
               
-               $('.page-content').slimScroll({
+              /* $('.page-content').slimScroll({
                 height: '400px'
-              });
+              });*/
 
               
               //  $('.tour-banner').attr('style','background-image: url('+ $('.tour-banner').data("thumb") +');');
