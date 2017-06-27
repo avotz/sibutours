@@ -569,7 +569,7 @@ $(window).resize(resizes);
                  height: $('.product').height() - 50
                });
               
-               $('.page-content').slimScroll({
+               $('body.page .page-content').slimScroll({
                 height: $('.page-media').height() - 50
               });
               $('.slide__category .fp-scrollable').slimScroll({

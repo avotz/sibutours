@@ -62,7 +62,7 @@ global $product;
 	   <?php  if(get_locale() == "es_ES"){?>
         Consulta ahora
        <?php } if(get_locale() == "en_US") {?>
-       inquery now
+       Inquire Now
        <?php } if(get_locale() == "fr_FR") {?>
        Enquête maintenant
         <?php } ?>
