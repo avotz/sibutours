@@ -18,8 +18,14 @@
                                 ) );
                                 
                              foreach ($categories as $key => $category) {  ?>
-                                 <li class="main__menu__item" data-goto="<?php echo $key+2 ?>"><?php echo $category->name ?></li>
-                            <?php } ?>
+                                
+                                <?php if(wp_is_mobile()){?>
+                                    <li class="main__menu__item" data-goto="<?php echo $key+2 ?>"><a href="/tour-category/<?php echo $category->slug ?>"><?php echo $category->name ?></a></li>
+                                   <?php }else{ ?>
+                                         <li class="main__menu__item" data-goto="<?php echo $key+2 ?>"><?php echo $category->name ?></li>
+                               <?php   }
+                                } 
+                                ?>
                                 
                                 <!-- <li class="main__menu__item" data-goto="3">Nature & Cultural</li>
                                 <li class="main__menu__item" data-goto="4">Water</li> -->
@@ -41,8 +47,13 @@
                                 ) );
                                 
                              foreach ($categories as $key => $category) {  ?>
-                                 <li class="main__menu__item" data-goto="<?php echo $key+2 ?>"><?php echo $category->name ?></li>
-                            <?php } ?>
+                               
+                                  <?php if(wp_is_mobile()){?>
+                                    <li class="main__menu__item" data-goto="<?php echo $key+2 ?>"><a href="/tour-category/<?php echo $category->slug ?>"><?php echo $category->name ?></a></li>
+                                   <?php }else{ ?>
+                                         <li class="main__menu__item" data-goto="<?php echo $key+2 ?>"><?php echo $category->name ?></li>
+                               <?php   }
+                             } ?>
                             </ul>
                         </div>
                     </div>

@@ -24,6 +24,7 @@ global $post, $product;
 $columns           = apply_filters( 'woocommerce_product_thumbnails_columns', 4 );
 $post_thumbnail_id = get_post_thumbnail_id( $post->ID );
 $full_size_image   = wp_get_attachment_image_src( $post_thumbnail_id, 'tour-gallery' );
+$thumb   = wp_get_attachment_image_src( $post_thumbnail_id, 'medium' );
 $image_title       = get_post_field( 'post_excerpt', $post_thumbnail_id );
 $placeholder       = has_post_thumbnail() ? 'with-images' : 'without-images';
 $wrapper_classes   = apply_filters( 'woocommerce_single_product_image_gallery_classes', array(
@@ -36,11 +37,19 @@ $wrapper_classes   = apply_filters( 'woocommerce_single_product_image_gallery_cl
 <div class="<?php echo esc_attr( implode( ' ', array_map( 'sanitize_html_class', $wrapper_classes ) ) ); ?> column column-2" data-columns="<?php echo esc_attr( $columns ); ?>" style="opacity: 0; transition: opacity .25s ease-in-out;">
 	<div class="owl-carousel">
 
+		<?php  if(wp_is_mobile()){ ?>
+
 		
-		
-		 <figure class="woocommerce-product-gallery__wrapper tour-banner" style="background-image: url('<?php echo esc_url( $full_size_image[0] ) ?>');">
+		 <figure class="woocommerce-product-gallery__wrapper tour-banner" style="background-image: url('<?php echo esc_url( $thumb[0] ) ?>');">
 			
 		</figure> 
+
+		<?php }else{ ?>
+			<figure class="woocommerce-product-gallery__wrapper tour-banner" style="background-image: url('<?php echo esc_url( $full_size_image[0] ) ?>');">
+			
+		</figure> 
+
+		<?php }?>
 		<?php do_action( 'woocommerce_product_thumbnails' ); ?>
 	</div>
 </div>

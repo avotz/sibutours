@@ -27,7 +27,7 @@ $attachment_ids = $product->get_gallery_image_ids();
 if ( $attachment_ids && has_post_thumbnail() ) {
 	foreach ( $attachment_ids as $attachment_id ) {
 		$full_size_image = wp_get_attachment_image_src( $attachment_id, 'tour-gallery' );
-		$thumbnail       = wp_get_attachment_image_src( $attachment_id, 'tour-gallery' );
+		$thumbnail       = wp_get_attachment_image_src( $attachment_id, 'medium' );
 		$image_title     = get_post_field( 'post_excerpt', $attachment_id );
 
 		$attributes = array(
@@ -37,9 +37,12 @@ if ( $attachment_ids && has_post_thumbnail() ) {
 			'data-large_image_width'  => $full_size_image[1],
 			'data-large_image_height' => $full_size_image[2],
 		);
+		if(wp_is_mobile()){
 
-		$html  = '<figure data-thumb="' . esc_url( $thumbnail[0] ) . '" class="woocommerce-product-gallery__image tour-banner" style="background-image: url('. esc_url( $full_size_image[0] ).');"></figure>';
-
+			$html  = '<figure data-thumb="' . esc_url( $thumbnail[0] ) . '" data-full="' . esc_url( $full_size_image[0] ) . '"  class="woocommerce-product-gallery__image tour-banner" style="background-image: url('. esc_url( $thumbnail[0] ).');"></figure>';
+		}else{
+			$html  = '<figure data-thumb="' . esc_url( $thumbnail[0] ) . '" data-full="' . esc_url( $full_size_image[0] ) . '"  class="woocommerce-product-gallery__image tour-banner" style="background-image: url('. esc_url( $full_size_image[0] ).');"></figure>';
+		}
 		echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', $html, $attachment_id );
 	}
 }

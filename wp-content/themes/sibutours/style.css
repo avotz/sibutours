@@ -1489,7 +1489,7 @@ textarea {
   float: left;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: #666;
 }
 .header__secondary__item:hover {
@@ -1589,7 +1589,7 @@ textarea {
   line-height: 88px;
   overflow: hidden;
   position: relative;
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: #666;
   text-align: center;
   margin: 0 auto;
@@ -1678,7 +1678,7 @@ textarea {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
-  background-position: 50% 50%;
+  background-position: center;
   background-repeat: no-repeat;
   pointer-events: none;
 }
@@ -1707,6 +1707,7 @@ textarea {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
+  background-position: center;
 }
 .fp-section .slide-home {
   background-color: transparent;
@@ -1805,6 +1806,8 @@ textarea {
   -o-transform: translate3d(0, -100%, 0);
   -ms-transform: translate3d(0, -100%, 0);
   transform: translate3d(0, -100%, 0);
+/*h4 
+					display none*/
 }
 .tours__grid .entry-header a {
   color: #fff;
@@ -1839,7 +1842,7 @@ textarea {
   display: block;
   float: left;
   padding: 1px;
-  width: 50%;
+  width: 100%;
 }
 .tours__grid li:hover .entry-excerpt {
   -webkit-transform: translate3d(0, -100%, 0);
@@ -1882,6 +1885,12 @@ textarea {
   line-height: 26px;
 }
 @media screen and (min-width: 800px) {
+  .tours__grid .entry-header .tour-title h4 {
+    display: block;
+  }
+  .tours__grid li {
+    width: 50%;
+  }
   .slide__content {
     margin-left: 200px;
   }
@@ -1934,13 +1943,13 @@ textarea {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
-  background-position: 50% 50%;
+  background-position: center center;
   position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
-  height: 100vh;
+  height: 30vh;
   min-height: 0;
   max-height: initial;
 }
@@ -1957,10 +1966,22 @@ textarea {
 .tour-regions a {
   color: #fff;
 }
+@media screen and (min-width: 768px) {
+  .tour-regions {
+    font-size: 16px;
+  }
+}
 @media screen and (min-width: 1000px) {
   .tour-content {
     padding-left: 100px;
     padding-top: 10vh;
+  }
+  .tour-banner {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    background-position: 50% 50%;
+    height: 100vh;
   }
 }
 @media screen and (min-width: 1400px) {
@@ -2147,6 +2168,9 @@ textarea {
   top: 350px;
   top: 50vh;
 }
+.main__menu__before .main__menu__item a {
+  color: #fff;
+}
 .main__menu__after {
   overflow-x: hidden;
   width: 100%;
@@ -2154,6 +2178,9 @@ textarea {
 }
 .main__menu__after .main__menu__items {
   margin-top: -3rem;
+}
+.main__menu__after .main__menu__item a {
+  color: #fff;
 }
 .main__menu__list {
   list-style: none;
@@ -2169,7 +2196,7 @@ textarea {
   cursor: pointer;
   font-size: 2rem;
   font-family: "ABeeZee", sans-serif;
-  color: #ccc;
+  color: #fff;
   position: relative;
   line-height: 1.5;
 }
@@ -2256,6 +2283,9 @@ textarea {
   }
 }
 @media screen and (min-width: 1024px) {
+  .main__menu__item {
+    color: #ccc;
+  }
   .main__menu__wrapper__open {
     visibility: visible;
   }
@@ -2417,9 +2447,9 @@ textarea {
   height: 175px;
 }
 .woocommerce div.product div.images .woocommerce-product-gallery__wrapper {
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
-  background-size: contain;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
   background-position: bottom center;
   position: relative;
   top: 0;
@@ -2486,7 +2516,7 @@ textarea {
   left: 0;
   bottom: 0;
   right: 0;
-  min-height: 100vh;
+  min-height: 30vh;
   max-height: initial;
 }
 .page-info {
@@ -2540,6 +2570,14 @@ textarea {
 }
 .home .footer span {
   display: none;
+}
+.hide-for-small-only {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .hide-for-small-only {
+    display: block;
+  }
 }
 
 /* Magnific Popup CSS */

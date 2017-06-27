@@ -32,7 +32,7 @@
         <div class="header__secondary">
             <a href="https://www.facebook.com/pages/Sibu-Tours-Guanacaste-Costa-Rica/280873449268" class="header__secondary__item " target="_blank"><i class="fa fa-facebook"></i></a>
             <a href="https://www.youtube.com/user/SibuToursCostaRica" class="header__secondary__item " target="_blank"><i class="fa fa-youtube"></i></a>
-            <a href="https://www.instagram.com/sibu_tours_costa_rica/" class="header__secondary__item " target="_blank"><i class="fa fa-instagram"></i></a>
+            <a href="https://www.instagram.com/sibutourscostarica/" class="header__secondary__item " target="_blank"><i class="fa fa-instagram"></i></a>
             <a href="http://www.tripadvisor.com/Attraction_Review-g309235-d1772405-Reviews-Sibu_Tours-Province_of_Guanacaste.html" class="header__secondary__item "><i class="fa fa-tripadvisor"></i></a>
         </div>
         <button id="btn-menu" class="header__btn-menu">

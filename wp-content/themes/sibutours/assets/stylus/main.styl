@@ -243,7 +243,7 @@ textarea
 			float left
 			padding-left 1.5rem
 			padding-right 1.5rem
-			font-size 2.5rem
+			font-size 2rem
 			color #666
 			&:hover
 				background-color rgba(100,100,100,0.2)
@@ -318,7 +318,7 @@ textarea
 		line-height 88px
 		overflow hidden
 		position relative
-		font-size 2.5rem
+		font-size 2rem
 		color #666
 		text-align center
 		margin 0 auto
@@ -392,7 +392,7 @@ textarea
 		height 100vh
 		width 100%
 		background-size cover 
-		background-position 50% 50%
+		background-position center//50% 50%
 		background-repeat no-repeat
 		pointer-events none
 	&__pager
@@ -418,6 +418,7 @@ textarea
 	.slide
 		background-color white
 		background-size cover
+		background-position: center;
 		&-home
 			background-color transparent	
 .background-cover
@@ -484,6 +485,8 @@ textarea
 				position relative
 				top 100%
 				transform translate3d(0,-100%,0)
+				/*h4 
+					display none*/
 			
 			a 
 				color white
@@ -508,7 +511,7 @@ textarea
 			display block
 			float left
 			padding 1px
-			width 50%
+			width 100%//50%
 			&:hover
 				.entry-excerpt
 					transform translate3d(0,-100%,0)
@@ -532,6 +535,15 @@ textarea
 			line-height 26px
 		
 @media screen and (min-width:800px)	
+	.tours
+		&__grid
+			.entry-header
+				.tour-title
+					h4 
+						display block
+			li
+				width 50%
+		
 	.slide
 		&__content
 			margin-left 200px
@@ -581,13 +593,13 @@ textarea
 	position relative
 .tour-banner
 	background-size cover
-	background-position 50% 50%
+	background-position center center
 	position absolute
 	top 0
 	left 0
 	bottom 0
 	right 0
-	height 100vh
+	height 30vh
 	min-height 0
 	max-height initial
 	
@@ -600,14 +612,20 @@ textarea
 	font-weight bold
 	display inline-block
 	line-height 16px
-	
+	//font-size 8px 
 	a 
 		color white
+@media screen and (min-width:768px)
+	.tour-regions
+		font-size 16px 
 @media screen and (min-width:1000px)
 	.tour-content
 		padding-left 100px
 		padding-top 10vh
-
+	.tour-banner
+		background-size cover
+		background-position 50% 50%
+		height 100vh
 @media screen and (min-width:1400px)
 	.tour-content
 		padding-left 200px
@@ -724,6 +742,9 @@ textarea
 			position relative
 			top 350px
 			top 50vh
+		.main__menu__item
+			a 
+				color white	
 			
 	&__menu__after
 		overflow-x hidden
@@ -731,6 +752,9 @@ textarea
 		margin-top 4.5rem
 		.main__menu__items
 			margin-top -3rem
+		.main__menu__item
+			a 
+				color white	
 
 	&__menu__list
 		list-style none
@@ -741,7 +765,7 @@ textarea
 		cursor pointer
 		font-size 2rem
 		font-family "ABeeZee",sans-serif
-		color #ccc
+		color white//#ccc
 		position relative
 		line-height 1.5
 	&__menu__big 
@@ -805,6 +829,8 @@ textarea
 
 @media screen and (min-width:1024px)
 	.main
+		&__menu__item
+			color #ccc
 		&__menu__wrapper__open
 			visibility visible
 
@@ -933,7 +959,7 @@ textarea
 	height 175px
 
 .woocommerce div.product div.images .woocommerce-product-gallery__wrapper
-	background-size contain;
+	background-size cover;
 	background-position bottom center;
 	position relative
 	top 0
@@ -987,7 +1013,7 @@ textarea
 		left 0
 		bottom 0
 		right 0
-		min-height 100vh
+		min-height 30vh
 		max-height initial
 
 .page-info
@@ -1037,3 +1063,9 @@ textarea
 		border-top none
 		span
 			display none
+
+.hide-for-small-only
+	display none
+@media screen and (min-width:768px)
+	.hide-for-small-only
+		display block

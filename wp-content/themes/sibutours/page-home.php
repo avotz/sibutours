@@ -21,12 +21,16 @@ get_header(); ?>
                 <div class="section" id="section-0" data-anchor="home">
                     
                    <section class="banner">
+                      <!--   <div class="banner__slide" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/rio-celeste.jpg');">
+                                        
+                                      
+                                    </div> -->
                         <div class="cycle-slideshow" 
                                     data-cycle-fx="scrollHorz"
                                     data-cycle-timeout="4000"
                                     data-cycle-slides=".banner__slide"
                                     >
-                                    <!-- empty element for pager links -->
+                                      <?php if(!wp_is_mobile()){?>
                                     <div class="cycle-pager banner__pager"></div>
 
                                     <div class="banner__slide" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/home.jpg');">
@@ -45,7 +49,12 @@ get_header(); ?>
                                         
                                       
                                     </div>
-                                
+                                    <?php }else{?>
+                                        <div class="banner__slide" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/rio-celeste.jpg');">
+                                        
+                                      
+                                       </div>
+                                     <?php }?>
                                     
                             </div>       
                        

@@ -19,17 +19,30 @@
 					 <?php if ( has_post_thumbnail() ) :
 
 	                  $id = get_post_thumbnail_id($post->ID);
-	                  $thumb_url = wp_get_attachment_image_src($id,'tour-gallery', true);
+	                  $big_url = wp_get_attachment_image_src($id,'tour-gallery', true);
+	                  $thumb_url = wp_get_attachment_image_src($id,'medium', true);
 	                  ?>
 	                  
-	              
+	              		<?php  if(wp_is_mobile()){ ?>
 	               		<figure class="page-banner tour-banner" style="background-image: url('<?php echo $thumb_url[0] ?>');">
 			
 						</figure>
-	                
+
+					<?php  }else{ ?>
+						<figure class="page-banner tour-banner" style="background-image: url('<?php echo $big_url[0] ?>');">
+			
+						</figure>
+	                 <?php } ?>
+
 	              <?php endif; ?>
 		
-					 <?php $images = rwmb_meta( 'rw_gallery_thumb', 'type=image&size=property-thumb' ); 
+					
+					 <?php  if(wp_is_mobile()){ 
+	               		 $images = rwmb_meta( 'rw_gallery_thumb', 'type=image&size=medium' ); 
+					}else{ 
+						  $images = rwmb_meta( 'rw_gallery_thumb', 'type=image&size=property-thumb' ); 
+	                    } 
+
 		             if ( $images ) : ?>
 		             
 		             	 
