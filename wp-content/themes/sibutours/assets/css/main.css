@@ -2516,7 +2516,7 @@ section.error-404 {
   .woocommerce-page #content div.product div.images,
   .woocommerce-page div.product div.images {
     float: right;
-    height: 100vh;
+    height: 90vh;
     width: 48%;
   }
   .woocommerce #content div.product div.summary,
@@ -2534,7 +2534,7 @@ section.error-404 {
     -moz-background-size: cover;
     background-size: cover;
     background-position: 50% 50%;
-    height: 100vh;
+    height: 90vh;
   }
 }
 .entry-content ul {
