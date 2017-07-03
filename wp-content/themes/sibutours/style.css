@@ -2556,7 +2556,7 @@ section.error-404 {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
-  background-position: top center;
+  background-position: center center;
   position: relative;
   top: 0;
   left: 0;
