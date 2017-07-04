@@ -26,7 +26,7 @@ get_header(); ?>
                                       
                                     </div> -->
                         <div class="cycle-slideshow" 
-                                    data-cycle-fx="fade"
+                                    data-cycle-fx="fadeout"
                                     data-cycle-timeout="4000"
                                     data-cycle-slides=".banner__slide"
                                     >
