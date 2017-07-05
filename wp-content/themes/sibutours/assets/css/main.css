@@ -1362,12 +1362,14 @@ section.error-404 {
   margin-bottom: 1.25rem;
 }
 .columns-2 .column,
-.columns-2 label {
+.columns-2 label,
+.columns-2 p {
   width: 100%;
 }
 @media screen and (min-width: 1001px) {
   .columns-2 .column,
-  .columns-2 label {
+  .columns-2 label,
+  .columns-2 p {
     width: 45%;
   }
 }
