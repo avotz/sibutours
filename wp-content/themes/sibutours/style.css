@@ -1361,7 +1361,13 @@ section.error-404 {
 }
 .columns-2 .column,
 .columns-2 label {
-  width: 45%;
+  width: 100%;
+}
+@media screen and (min-width: 1001px) {
+  .columns-2 .column,
+  .columns-2 label {
+    width: 45%;
+  }
 }
 .txt-center {
   text-align: center;
