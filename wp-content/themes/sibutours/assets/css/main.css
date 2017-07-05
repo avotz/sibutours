@@ -1313,6 +1313,8 @@ img {
 input[type="number"],
 input[type="text"],
 input[type="email"],
+input[type="date"],
+input[type="tel"],
 select,
 textarea {
   height: 36px;
