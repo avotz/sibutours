@@ -1675,7 +1675,6 @@ section.error-404 {
   }
   .header__logo {
     position: relative;
-    width: 191px;
   }
   .header__secondary {
     position: relative;
@@ -1716,6 +1715,9 @@ section.error-404 {
   }
 }
 @media screen and (min-width: 1200px) {
+  .header__logo {
+    width: 191px;
+  }
   .header__menu {
     text-align: center;
     padding-left: 0;
