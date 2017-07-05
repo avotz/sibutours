@@ -20,6 +20,14 @@
            //$('.filters').find('form').submit();
         },
     });
+     $(".time").flatpickr({
+       enableTime: true,
+       noCalendar: true,
+
+       enableSeconds: false, // disabled by default
+
+       time_24hr: true,
+    });
     
      btnMenu.on('click', function(){
           menu.toggle();
