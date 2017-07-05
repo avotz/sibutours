@@ -1577,7 +1577,7 @@ section.error-404 {
   display: block;
   font-size: 1rem;
   color: #fff;
-  padding: 1.8rem 1rem;
+  padding: 1.8rem 0.6rem;
   font-weight: 700;
   position: relative;
 }
@@ -1721,6 +1721,10 @@ section.error-404 {
   .header__menu {
     text-align: center;
     padding-left: 0;
+a
+  }
+  .header__menu__link {
+    padding: 1.8rem 1rem;
   }
 }
 .section__bg {
