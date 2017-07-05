@@ -1319,6 +1319,7 @@ select,
 textarea {
   height: 36px;
   width: 100%;
+  background-color: #fff !important;
 }
 textarea {
   height: 80px;
