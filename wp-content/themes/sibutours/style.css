@@ -1721,8 +1721,8 @@ section.error-404 {
   .header__menu {
     text-align: center;
     padding-left: 0;
-a
   }
+  .header__menu a,
   .header__menu__link {
     padding: 1.8rem 1rem;
   }
