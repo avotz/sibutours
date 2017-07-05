@@ -24,7 +24,7 @@ var gulp        = require('gulp'),
 
 gulp.task('js', function () {
   gulp.src([
-      './assets/js/vendor/jquery-1.11.2.min.js',
+      /*'./assets/js/vendor/jquery-1.11.2.min.js',*/
       './assets/js/vendor/jquery.hoverIntent.minified.js',
       './assets/js/vendor/owl.carousel.js',
       /*'./assets/js/vendor/jquery.contentcarousel.js',
