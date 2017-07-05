@@ -1361,8 +1361,7 @@ section.error-404 {
   justify-content: space-between;
 }
 .columns-2 .column,
-.columns-2 label,
-.columns-2 p {
+.columns-2 label {
   width: 100%;
 }
 @media screen and (min-width: 768px) {
@@ -1370,8 +1369,7 @@ section.error-404 {
     margin-bottom: 1.25rem;
   }
   .columns-2 .column,
-  .columns-2 label,
-  .columns-2 p {
+  .columns-2 label {
     width: 45%;
   }
 }
