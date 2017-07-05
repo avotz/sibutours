@@ -2630,7 +2630,7 @@ section.error-404 {
   bottom: 0;
   z-index: 2;
   text-align: right;
-  padding: 0.5rem 0;
+  padding: 0.5rem 0.5rem;
   border-top: 1px solid #ddd;
 }
 .footer span {
@@ -2638,6 +2638,7 @@ section.error-404 {
 }
 @media screen and (min-width: 768px) {
   .footer {
+    padding: 0.5rem 0;
     text-align: center;
   }
 }
