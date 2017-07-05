@@ -2664,6 +2664,10 @@ section.error-404 {
     filter: none;
   }
 }
+.wpcf7-form-control-wrap.date.flatpickr-input.flatpickr-mobile,
+.wpcf7-form-control-wrap.time.flatpickr-input.flatpickr-mobile {
+  display: none;
+}
 
 /* Magnific Popup CSS */
 .mfp-bg {
