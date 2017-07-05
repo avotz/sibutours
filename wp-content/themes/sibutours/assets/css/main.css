@@ -1657,7 +1657,7 @@ section.error-404 {
 @media screen and (min-width: 455px) {
   .header__logo {
     float: left;
-    width: 191px;
+    width: 135px;
     border-right: 1px solid #ddd;
     border-bottom: none;
   }
@@ -1675,6 +1675,7 @@ section.error-404 {
   }
   .header__logo {
     position: relative;
+    width: 191px;
   }
   .header__secondary {
     position: relative;
@@ -1690,7 +1691,8 @@ section.error-404 {
     position: absolute;
     left: 0;
     right: 0;
-    text-align: center;
+    text-align: left;
+    padding-left: 8rem;
   }
   .header__menu__ul {
     display: inline-block;
@@ -1711,6 +1713,12 @@ section.error-404 {
   }
   .header__btn-menu {
     display: none;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header__menu {
+    text-align: center;
+    padding-left: 0;
   }
 }
 .section__bg {

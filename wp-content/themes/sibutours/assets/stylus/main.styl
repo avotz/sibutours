@@ -341,7 +341,7 @@ section.error-404
 	.header 
 		&__logo
 			float left
-			width 191px
+			width 135px//191px
 			border-right 1px solid #ddd
 			border-bottom none	
 	
@@ -356,6 +356,7 @@ section.error-404
 	
 		&__logo
 			position relative
+			width 191px
 		&__secondary
 			position relative
 			z-index 2
@@ -368,7 +369,8 @@ section.error-404
 			position absolute
 			left 0 
 			right 0
-			text-align center
+			text-align left 
+			padding-left 8rem
 			&__ul
 				display inline-block
 			li
@@ -385,7 +387,11 @@ section.error-404
 					
 		&__btn-menu
 			display none
-			
+@media screen and (min-width:1200px)
+	.header
+		&__menu
+			text-align center 
+			padding-left 0
 .section
 	&__bg
 		background-size cover
