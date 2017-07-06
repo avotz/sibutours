@@ -6,6 +6,7 @@
 amarillo = #ffe600//#ffb730//#ffe600
 gris = #4D4D4D
 rojo = #bf1c2d
+verde = #4CB547
 
 *
 	box-sizing border-box
@@ -80,6 +81,8 @@ input[type="email"]
 input[type="date"]
 input[type="tel"]
 input[type="time"]
+input[type="search"]
+input[type="url"]
 select
 textarea
 	height: 36px;
@@ -121,9 +124,11 @@ section.error-404
 			width 45%
 .txt-center
 	text-align center
+.search-submit
+.comment-form .submit
 .wpcf7-submit
 .btn
-	padding .8rem 1rem .8rem 1rem
+	padding .8rem .5rem .8rem .5rem
 	display inline-block
 	color #000
 	transition all .5s ease
@@ -150,7 +155,8 @@ section.error-404
 		&:hover
 			background-color #b9b9b9
 			color white
-
+.search-submit
+.comment-form .submit
 .wpcf7-submit
 	background-color #007d3b
 	border-color #00642f
@@ -390,7 +396,7 @@ section.error-404
 					
 		&__btn-menu
 			display none
-@media screen and (min-width:1200px)
+@media screen and (min-width:1280px)
 	.header
 		&__logo
 			width 191px
@@ -1104,3 +1110,69 @@ section.error-404
 .wpcf7-form-control-wrap.date.flatpickr-input.flatpickr-mobile
 .wpcf7-form-control-wrap.time.flatpickr-input.flatpickr-mobile
 	display none
+
+body.single
+body.blog
+	overflow scroll !important
+.blog 
+	&-container 
+		display flex
+		flex-wrap wrap
+		justify-content space-between
+		
+	&-info 
+	&-sidebar
+		width 100%
+		padding: 2rem
+		ul 
+			margin-left 35px 
+	
+		.widget-area
+			.widget
+				margin-bottom 2rem
+				&-title
+					margin-bottom 0
+					color verde
+				
+			.widget_search
+				.screen-reader-text
+				.search-submit
+					display none
+		.post 
+			border-bottom 1px solid #ddd
+			padding-bottom 1rem
+		.entry-header
+			position relative
+			
+		.entry-meta
+			position absolute
+			bottom 0
+			right 0
+			background rojo
+			color white 
+			padding 0 .5rem
+			a 
+				color white
+		.entry-content
+			margin-top .5rem
+	&-banner
+		background-size cover 
+		background-position center center
+		background-repeat no-repeat
+		height 30vh
+
+.search 
+	.search-submit
+		margin-top 1rem
+
+				
+@media screen and (min-width:768px)
+	.blog 
+		&-container 
+			padding-top 6rem
+		&-info
+			width 70%
+			padding: 2rem 1rem 2rem 4rem; 
+		&-sidebar
+			width 30%
+			border-left 1px solid #ddd

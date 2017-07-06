@@ -4,14 +4,17 @@
       menu = $('.header__menu');
      
      
-   /* $(window).load(function() {
+    $(window).load(function() {
      
      
        //$('.main').fadeTo(1000, 1);
+       if(isBlog())
+          $('html').css('overflow','visible');
        
 
 
-    });*/
+
+    });
      $('select').select2();
 
      $(".date").flatpickr({
@@ -249,6 +252,11 @@ $(".owl-carousel").owlCarousel({
    function isSmall() {
         
         return !($('.header__btn-menu').css('display') == 'none');
+        
+    }
+    function isBlog() {
+        
+        return ($('body').hasClass('single-format-standard') || $('body').hasClass('blog'));
         
     }
    $main__menu__wrapper.on('click', '.main__menu__item', function(e) {

@@ -1316,6 +1316,8 @@ input[type="email"],
 input[type="date"],
 input[type="tel"],
 input[type="time"],
+input[type="search"],
+input[type="url"],
 select,
 textarea {
   height: 36px;
@@ -1381,9 +1383,11 @@ section.error-404 {
 .txt-center {
   text-align: center;
 }
+.search-submit,
+.comment-form .submit,
 .wpcf7-submit,
 .btn {
-  padding: 0.8rem 1rem 0.8rem 1rem;
+  padding: 0.8rem 0.5rem 0.8rem 0.5rem;
   display: inline-block;
   color: #000;
   -webkit-transition: all 0.5s ease;
@@ -1394,45 +1398,61 @@ section.error-404 {
   font-weight: 400;
   margin-bottom: 1.25rem;
 }
+.search-submit.danger,
+.comment-form .submit.danger,
 .wpcf7-submit.danger,
 .btn.danger {
   background-color: #bf1c2d;
   border-color: #bf1c2d;
   color: #fff;
 }
+.search-submit.danger:hover,
+.comment-form .submit.danger:hover,
 .wpcf7-submit.danger:hover,
 .btn.danger:hover {
   background-color: #00642f;
   color: #fff;
 }
+.search-submit.success,
+.comment-form .submit.success,
 .wpcf7-submit.success,
 .btn.success {
   background-color: #007d3b;
   border-color: #00642f;
   color: #fff;
 }
+.search-submit.success:hover,
+.comment-form .submit.success:hover,
 .wpcf7-submit.success:hover,
 .btn.success:hover {
   background-color: #00642f;
   color: #fff;
 }
+.search-submit.secondary,
+.comment-form .submit.secondary,
 .wpcf7-submit.secondary,
 .btn.secondary {
   background-color: #e7e7e7;
   border-color: #b9b9b9;
   color: #333;
 }
+.search-submit.secondary:hover,
+.comment-form .submit.secondary:hover,
 .wpcf7-submit.secondary:hover,
 .btn.secondary:hover {
   background-color: #b9b9b9;
   color: #fff;
 }
+.search-submit,
+.comment-form .submit,
 .wpcf7-submit {
   background-color: #007d3b;
   border-color: #00642f;
   color: #fff;
   border: none;
 }
+.search-submit:hover,
+.comment-form .submit:hover,
 .wpcf7-submit:hover {
   background-color: #00642f;
   color: #fff;
@@ -1717,7 +1737,7 @@ section.error-404 {
     display: none;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
   .header__logo {
     width: 191px;
   }
@@ -2667,4 +2687,102 @@ section.error-404 {
 .wpcf7-form-control-wrap.date.flatpickr-input.flatpickr-mobile,
 .wpcf7-form-control-wrap.time.flatpickr-input.flatpickr-mobile {
   display: none;
+}
+body.single,
+body.blog {
+  overflow: scroll !important;
+}
+.blog-container {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -o-box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -o-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+.blog-info,
+.blog-sidebar {
+  width: 100%;
+  padding: 2rem;
+}
+.blog-info ul,
+.blog-sidebar ul {
+  margin-left: 35px;
+}
+.blog-info .widget-area .widget,
+.blog-sidebar .widget-area .widget {
+  margin-bottom: 2rem;
+}
+.blog-info .widget-area .widget-title,
+.blog-sidebar .widget-area .widget-title {
+  margin-bottom: 0;
+  color: #4cb547;
+}
+.blog-info .widget-area .widget_search .screen-reader-text,
+.blog-sidebar .widget-area .widget_search .screen-reader-text,
+.blog-info .widget-area .widget_search .search-submit,
+.blog-sidebar .widget-area .widget_search .search-submit {
+  display: none;
+}
+.blog-info .post,
+.blog-sidebar .post {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 1rem;
+}
+.blog-info .entry-header,
+.blog-sidebar .entry-header {
+  position: relative;
+}
+.blog-info .entry-meta,
+.blog-sidebar .entry-meta {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: #bf1c2d;
+  color: #fff;
+  padding: 0 0.5rem;
+}
+.blog-info .entry-meta a,
+.blog-sidebar .entry-meta a {
+  color: #fff;
+}
+.blog-info .entry-content,
+.blog-sidebar .entry-content {
+  margin-top: 0.5rem;
+}
+.blog-banner {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 30vh;
+}
+.search .search-submit {
+  margin-top: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .blog-container {
+    padding-top: 6rem;
+  }
+  .blog-info {
+    width: 70%;
+    padding: 2rem 1rem 2rem 4rem;
+  }
+  .blog-sidebar {
+    width: 30%;
+    border-left: 1px solid #ddd;
+  }
 }
