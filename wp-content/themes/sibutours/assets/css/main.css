@@ -2740,6 +2740,7 @@ body.blog {
 .blog-sidebar .post {
   border-bottom: 1px solid #ddd;
   padding-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 .blog-info .entry-header,
 .blog-sidebar .entry-header {
