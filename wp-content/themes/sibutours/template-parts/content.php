@@ -27,7 +27,7 @@
       	<?php  if(wp_is_mobile()){ ?>
        		<figure class="post-banner blog-banner" style="background-image: url('<?php echo $thumb_url[0] ?>');">
 				<?php  if ( !is_single() ) :?>
-					<a href="<?php get_permalink() ?>"></a>
+					<a href="<?php echo get_permalink() ?>"></a>
 				
 				<?php  endif;?>
 			</figure>
