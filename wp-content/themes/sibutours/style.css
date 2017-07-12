@@ -2712,6 +2712,9 @@ body.blog {
   -webkit-justify-content: space-between;
   justify-content: space-between;
 }
+.blog-container a:hover {
+  text-decoration: underline;
+}
 .blog-info,
 .blog-sidebar {
   width: 100%;
