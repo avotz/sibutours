@@ -2798,3 +2798,10 @@ body.blog {
     border-left: 1px solid #ddd;
   }
 }
+.home-tripadvisor {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 999;
+  width: 200px;
+}

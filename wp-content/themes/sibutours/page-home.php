@@ -197,6 +197,9 @@ get_header(); ?>
             </div>
             
            <?php  get_template_part( 'template-parts/menu', 'home' ); ?>
+           <div class="home-tripadvisor">
+            <a href="http://www.tripadvisor.com/Attraction_Review-g309235-d1772405-Reviews-Sibu_Tours-Province_of_Guanacaste.html" target="_blank"><img src="<?php echo get_template_directory_uri();  ?>/img/tripadvisor-7yearsinarow.png" alt="tripadvisor"></a>
+           </div>
 
              
         </main>
