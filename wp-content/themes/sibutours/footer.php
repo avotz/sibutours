@@ -49,6 +49,16 @@
         } ?>               
       
   </div>
+  <div id="package-popup" class="request-popup white-popup mfp-hide mfp-with-anim">
+		<?php  if(get_locale() == "es_ES"){
+         echo do_shortcode('[contact-form-7 id="155" title="Contact Form ES"]');
+        } if(get_locale() == "en_US") {
+         echo do_shortcode('[contact-form-7 id="45" title="Contact Form"]') ;
+       } if(get_locale() == "fr_FR") {
+          echo do_shortcode('[contact-form-7 id="182" title="Contact Form FR"]'); 
+        } ?>               
+	    
+	</div>
 
 <?php wp_footer(); ?>
 

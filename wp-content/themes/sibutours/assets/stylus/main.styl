@@ -2,6 +2,7 @@
 @import "normalize.styl"
 @import "icons.styl"
 @import "tables.styl"
+@import "tabs.styl"
 
 amarillo = #ffe600//#ffb730//#ffe600
 gris = #4D4D4D
@@ -134,6 +135,9 @@ section.error-404
 	transition all .5s ease
 	font-weight 400
 	margin-bottom 1.25rem
+	&.block
+		display: block
+		text-align: center
 	&.danger
 		background-color rojo
 		border-color rojo
@@ -1113,8 +1117,9 @@ section.error-404
 
 body.single
 body.blog
-	overflow scroll !important
-.blog 
+	overflow-y scroll !important
+.blog
+.package 
 	&-container 
 		display flex
 		flex-wrap wrap
@@ -1126,7 +1131,7 @@ body.blog
 	&-info 
 	&-sidebar
 		width 100%
-		padding: 2rem
+		padding: 2rem 0
 		ul 
 			margin-left 35px 
 	
@@ -1159,6 +1164,8 @@ body.blog
 				color white
 		.entry-content
 			margin-top .5rem
+	&-sidebar
+		padding-top: 0
 	&-banner
 		background-size cover 
 		background-position center center
@@ -1171,6 +1178,14 @@ body.blog
 			right 0
 			top 0
 			bottom 0
+.package
+	&-banner
+		a
+			right auto
+			top auto 
+			left 1rem
+			bottom: 0
+			padding: .2rem 1rem;
 
 .search 
 	.search-submit
@@ -1178,7 +1193,8 @@ body.blog
 
 				
 @media screen and (min-width:768px)
-	.blog 
+	.blog
+	.package 
 		&-container 
 			padding-top 6rem
 		&-info
@@ -1187,6 +1203,7 @@ body.blog
 		&-sidebar
 			width 30%
 			border-left 1px solid #ddd
+			padding: 2rem
 
 .home-tripadvisor
 	position: absolute

@@ -8,7 +8,7 @@
      
      
        //$('.main').fadeTo(1000, 1);
-       if(isBlog())
+       if(isBlog() || isPackage())
           $('html').css('overflow','visible');
        
 
@@ -259,6 +259,11 @@ $(".owl-carousel").owlCarousel({
         return ($('body').hasClass('single-format-standard') || $('body').hasClass('blog'));
         
     }
+    function isPackage() {
+        
+        return ($('body').hasClass('single-format-standard') || $('body').hasClass('vacational-package-template-default'));
+        
+    }
    $main__menu__wrapper.on('click', '.main__menu__item', function(e) {
         e.stopPropagation();
      
@@ -493,6 +498,33 @@ function set_destination_scrolled(delta) {
 
        
     });
+    $('.package-popup-link').magnificPopup({
+        type: 'inline',
+        midClick: true,
+        removalDelay: 500, //delay removal by X to allow out-animation
+        callbacks: {
+            beforeOpen: function() {
+
+                this.st.mainClass = 'mfp-zoom-out';
+                $('body').addClass('mfp-open');
+            },
+            beforeClose: function() {
+
+               
+                $('body').removeClass('mfp-open');
+            }
+
+        }
+
+       
+    });
+    $('.package-gallery').magnificPopup({
+        type: 'image',
+        gallery:{
+            enabled:true
+          }
+        
+      });
  
 
   fillSelectTour();
@@ -553,6 +585,16 @@ function set_destination_scrolled(delta) {
       
 
       });
+
+      $('.package-popup-link').on('click',function (e) {
+        
+      
+        $('#package-popup').find('input[name="your-subject"]').val($(this).attr('data-title'));
+        
+       
+  
+        });
+  
       
       
 
@@ -668,7 +710,22 @@ $(window).resize(resizes);
 
 
 
-
+     $("#content-tabs").find("[id^='tab']").hide(); // Hide all content
+     $("#tabs li:first").attr("id","current"); // Activate the first tab
+     $("#content-tabs #tab-description").fadeIn(); // Show first tab's content
+     
+     $('#tabs a').click(function(e) {
+         e.preventDefault();
+         if ($(this).closest("li").attr("id") == "current"){ //detection for current tab
+          return;       
+         }
+         else{             
+           $("#content-tabs").find("[id^='tab']").hide(); // Hide all content
+           $("#tabs li").attr("id",""); //Reset id's
+           $(this).parent().attr("id","current"); // Activate this
+           $('#' + $(this).attr('name')).fadeIn(); // Show content for the current tab
+         }
+     });
 
 
 })(jQuery);

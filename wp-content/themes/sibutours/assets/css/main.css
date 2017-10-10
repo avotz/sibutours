@@ -1226,6 +1226,90 @@ table th[class*="col-"] {
     content: attr(data-title);
   }
 }
+#tabs {
+  overflow: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#tabs li {
+  float: left;
+  margin: 0 0.5em 0 0;
+}
+#tabs a {
+  position: relative;
+  background: #ddd;
+  background-image: -webkit-linear-gradient(top, #fff, #ddd);
+  background-image: -moz-linear-gradient(top, #fff, #ddd);
+  background-image: -o-linear-gradient(top, #fff, #ddd);
+  background-image: -ms-linear-gradient(top, #fff, #ddd);
+  background-image: linear-gradient(to bottom, #fff, #ddd);
+  padding: 0.4rem;
+  float: left;
+  text-decoration: none;
+  color: #444;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.8);
+  border-radius: 5px 0 0 0;
+  -webkit-box-shadow: 0 2px 2px rgba(0,0,0,0.4);
+  box-shadow: 0 2px 2px rgba(0,0,0,0.4);
+}
+@media screen and (min-width: 640px) {
+  #tabs a {
+    padding: 1rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #tabs a {
+    padding: 0.7em 2em;
+  }
+}
+#tabs a:hover,
+#tabs a:hover::after,
+#tabs a:focus,
+#tabs a:focus::after {
+  background: #fff;
+}
+#tabs a:focus {
+  outline: 0;
+}
+#tabs a::after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: -0.5em;
+  bottom: 0;
+  width: 1em;
+  background: #ddd;
+  background-image: -webkit-linear-gradient(top, #fff, #ddd);
+  background-image: -moz-linear-gradient(top, #fff, #ddd);
+  background-image: -o-linear-gradient(top, #fff, #ddd);
+  background-image: -ms-linear-gradient(top, #fff, #ddd);
+  background-image: linear-gradient(to bottom, #fff, #ddd);
+  -webkit-box-shadow: 2px 2px 2px rgba(0,0,0,0.4);
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.4);
+  -webkit-transform: skew(10deg);
+  -moz-transform: skew(10deg);
+  -o-transform: skew(10deg);
+  -ms-transform: skew(10deg);
+  transform: skew(10deg);
+  border-radius: 0 5px 0 0;
+}
+#tabs #current a,
+#tabs #current a::after {
+  background: #fff;
+  z-index: 3;
+}
+#content-tabs {
+  background: #fff;
+  padding: 2em;
+  position: relative;
+  z-index: 2;
+  border-radius: 0 5px 5px 5px;
+  -webkit-box-shadow: 0 -2px 3px -2px rgba(0,0,0,0.5);
+  box-shadow: 0 -2px 3px -2px rgba(0,0,0,0.5);
+}
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -1397,6 +1481,13 @@ section.error-404 {
   transition: all 0.5s ease;
   font-weight: 400;
   margin-bottom: 1.25rem;
+}
+.search-submit.block,
+.comment-form .submit.block,
+.wpcf7-submit.block,
+.btn.block {
+  display: block;
+  text-align: center;
 }
 .search-submit.danger,
 .comment-form .submit.danger,
@@ -2690,9 +2781,10 @@ section.error-404 {
 }
 body.single,
 body.blog {
-  overflow: scroll !important;
+  overflow-y: scroll !important;
 }
-.blog-container {
+.blog-container,
+.package-container {
   display: -webkit-box;
   display: -moz-box;
   display: -webkit-flex;
@@ -2712,45 +2804,64 @@ body.blog {
   -webkit-justify-content: space-between;
   justify-content: space-between;
 }
-.blog-container a:hover {
+.blog-container a:hover,
+.package-container a:hover {
   text-decoration: underline;
 }
 .blog-info,
-.blog-sidebar {
+.package-info,
+.blog-sidebar,
+.package-sidebar {
   width: 100%;
-  padding: 2rem;
+  padding: 2rem 0;
 }
 .blog-info ul,
-.blog-sidebar ul {
+.package-info ul,
+.blog-sidebar ul,
+.package-sidebar ul {
   margin-left: 35px;
 }
 .blog-info .widget-area .widget,
-.blog-sidebar .widget-area .widget {
+.package-info .widget-area .widget,
+.blog-sidebar .widget-area .widget,
+.package-sidebar .widget-area .widget {
   margin-bottom: 2rem;
 }
 .blog-info .widget-area .widget-title,
-.blog-sidebar .widget-area .widget-title {
+.package-info .widget-area .widget-title,
+.blog-sidebar .widget-area .widget-title,
+.package-sidebar .widget-area .widget-title {
   margin-bottom: 0;
   color: #4cb547;
 }
 .blog-info .widget-area .widget_search .screen-reader-text,
+.package-info .widget-area .widget_search .screen-reader-text,
 .blog-sidebar .widget-area .widget_search .screen-reader-text,
+.package-sidebar .widget-area .widget_search .screen-reader-text,
 .blog-info .widget-area .widget_search .search-submit,
-.blog-sidebar .widget-area .widget_search .search-submit {
+.package-info .widget-area .widget_search .search-submit,
+.blog-sidebar .widget-area .widget_search .search-submit,
+.package-sidebar .widget-area .widget_search .search-submit {
   display: none;
 }
 .blog-info .post,
-.blog-sidebar .post {
+.package-info .post,
+.blog-sidebar .post,
+.package-sidebar .post {
   border-bottom: 1px solid #ddd;
   padding-bottom: 1rem;
   margin-bottom: 1rem;
 }
 .blog-info .entry-header,
-.blog-sidebar .entry-header {
+.package-info .entry-header,
+.blog-sidebar .entry-header,
+.package-sidebar .entry-header {
   position: relative;
 }
 .blog-info .entry-meta,
-.blog-sidebar .entry-meta {
+.package-info .entry-meta,
+.blog-sidebar .entry-meta,
+.package-sidebar .entry-meta {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -2759,14 +2870,23 @@ body.blog {
   padding: 0 0.5rem;
 }
 .blog-info .entry-meta a,
-.blog-sidebar .entry-meta a {
+.package-info .entry-meta a,
+.blog-sidebar .entry-meta a,
+.package-sidebar .entry-meta a {
   color: #fff;
 }
 .blog-info .entry-content,
-.blog-sidebar .entry-content {
+.package-info .entry-content,
+.blog-sidebar .entry-content,
+.package-sidebar .entry-content {
   margin-top: 0.5rem;
 }
-.blog-banner {
+.blog-sidebar,
+.package-sidebar {
+  padding-top: 0;
+}
+.blog-banner,
+.package-banner {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -2775,27 +2895,39 @@ body.blog {
   height: 30vh;
   position: relative;
 }
-.blog-banner a {
+.blog-banner a,
+.package-banner a {
   position: absolute;
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
 }
+.package-banner a {
+  right: auto;
+  top: auto;
+  left: 1rem;
+  bottom: 0;
+  padding: 0.2rem 1rem;
+}
 .search .search-submit {
   margin-top: 1rem;
 }
 @media screen and (min-width: 768px) {
-  .blog-container {
+  .blog-container,
+  .package-container {
     padding-top: 6rem;
   }
-  .blog-info {
+  .blog-info,
+  .package-info {
     width: 70%;
     padding: 2rem 1rem 2rem 4rem;
   }
-  .blog-sidebar {
+  .blog-sidebar,
+  .package-sidebar {
     width: 30%;
     border-left: 1px solid #ddd;
+    padding: 2rem;
   }
 }
 .home-tripadvisor {
