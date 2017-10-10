@@ -32,6 +32,11 @@ get_header(); ?>
                                     >
                                       <?php if(!wp_is_mobile()){?>
                                     <div class="cycle-pager banner__pager"></div>
+                                    
+                                    <div class="banner__slide" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/rio-celeste.jpg');">
+                                        
+                                      
+                                    </div>
 
                                     <div class="banner__slide" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/home.jpg');">
                                         
@@ -45,10 +50,7 @@ get_header(); ?>
                                         
                                       
                                     </div>
-                                     <div class="banner__slide" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/rio-celeste.jpg');">
-                                        
-                                      
-                                    </div>
+                                     
                                     <?php }else{?>
                                         <div class="banner__slide" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/rio-celeste.jpg');">
                                         

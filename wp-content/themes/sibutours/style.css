@@ -1619,6 +1619,8 @@ section.error-404 {
 .header {
   max-width: 100%;
   padding-bottom: 0;
+  position: relative;
+  z-index: 1000;
 }
 .header__container {
   position: relative;
@@ -1783,6 +1785,9 @@ section.error-404 {
     -o-transform: translate3d(0, 130%, 0);
     -ms-transform: translate3d(0, 130%, 0);
     transform: translate3d(0, 130%, 0);
+  }
+  .header {
+    position: static;
   }
   .header__container {
     position: fixed;

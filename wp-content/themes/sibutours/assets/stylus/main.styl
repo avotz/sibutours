@@ -233,7 +233,8 @@ section.error-404
 .header
 	max-width 100%
 	padding-bottom 0
-	
+	position: relative
+	z-index 1000
 	&__container
 		position relative
 		top 0
@@ -275,6 +276,7 @@ section.error-404
 	&__menu
 		display none
 		background-color #222
+		
 		
 		li
 		&__item
@@ -364,6 +366,7 @@ section.error-404
 			img
 				transform translate3d(0,130%,0)
 	.header
+		position: static
 		&__container
 			position fixed
 	
