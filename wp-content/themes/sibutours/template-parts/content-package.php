@@ -73,10 +73,36 @@
 
 	<div class="entry-content">
     <ul id="tabs">
-        <li><a href="#" name="tab-description">Description</a></li>
-        <li><a href="#" name="tab-schelude">Schedule</a></li>
-        <li><a href="#" name="tab-hotel">Hotel Activities</a></li>
-        <li><a href="#" name="tab-rates">Rates</a></li>    
+        <li><a href="#" name="tab-description"><?php  if(get_locale() == "es_ES"){?>
+								Descripción
+							<?php } if(get_locale() == "en_US") {?>
+							Description
+							<?php } if(get_locale() == "fr_FR") {?>
+                                Description
+								<?php } ?></a></li>
+        <li><a href="#" name="tab-schelude"><?php  if(get_locale() == "es_ES"){?>
+								Horario
+							<?php } if(get_locale() == "en_US") {?>
+							Schedule
+							<?php } if(get_locale() == "fr_FR") {?>
+                                Calendier
+								<?php } ?></a></li>
+        <li><a href="#" name="tab-hotel"><?php  if(get_locale() == "es_ES"){?>
+								Actividades Hotel
+							<?php } if(get_locale() == "en_US") {?>
+							Hotel Activities
+							<?php } if(get_locale() == "fr_FR") {?>
+                                Activités de l'hôtel
+								<?php } ?></a></li>
+                               
+
+        <li><a href="#" name="tab-rates"><?php  if(get_locale() == "es_ES"){?>
+								Precios
+							<?php } if(get_locale() == "en_US") {?>
+							Rates
+							<?php } if(get_locale() == "fr_FR") {?>
+                                Les taux
+								<?php } ?></a></li>    
     </ul>
 
     <div id="content-tabs"> 
