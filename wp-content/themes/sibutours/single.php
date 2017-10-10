@@ -37,6 +37,16 @@ get_header(); ?>
 							
 
 							</a>
+							<?php
+							$files = rwmb_meta( 'rw_pdf_thumb');
+							
+							if ( !empty( $files ) ) {
+									foreach ( $files as $file ) : ?>
+										<a title="<?php echo $file['name']; ?>" href="<?php echo $file['url']; ?>" class="btn danger block btn-pdf" target="_blank">Download PDF Info</a>
+								<?php endforeach; 
+								}
+
+							?>
 						<?php
 			    			echo do_shortcode(rwmb_meta( 'rw_sidebar')); 	?>
 						</div>
