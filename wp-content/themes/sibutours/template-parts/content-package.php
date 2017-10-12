@@ -88,20 +88,20 @@
                                 Calendier
 								<?php } ?></a></li>
         <li><a href="#" name="tab-hotel"><?php  if(get_locale() == "es_ES"){?>
-								Actividades Hotel
+							Hotel y Actividades
 							<?php } if(get_locale() == "en_US") {?>
-							Hotel Activities
+							Hotel & Activities
 							<?php } if(get_locale() == "fr_FR") {?>
-                                Activités de l'hôtel
+								Hôtel & Activités
 								<?php } ?></a></li>
                                
 
         <li><a href="#" name="tab-rates"><?php  if(get_locale() == "es_ES"){?>
-								Precios
+								Precios y políticas
 							<?php } if(get_locale() == "en_US") {?>
-							Rates
+							Rates & Policies
 							<?php } if(get_locale() == "fr_FR") {?>
-                                Les taux
+								Tarifs & Politiques
 								<?php } ?></a></li>    
     </ul>
 
