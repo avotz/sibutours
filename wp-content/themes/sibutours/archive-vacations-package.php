@@ -66,7 +66,7 @@ get_header(); ?>
                                              <?php the_title(); ?>
                                             </small>
                                             <h4>
-                                            <a href="<?php the_permalink(); ?>" title="<?php echo $category->name; ?>"><?php echo $category->name; ?></a>
+                                            <a href="<?php the_permalink(); ?>" title="Vacations Packages">Vacations Packages</a>
                                             </h4>
                                             </div>
                                             </div>
