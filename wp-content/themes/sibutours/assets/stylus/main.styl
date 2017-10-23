@@ -1185,7 +1185,7 @@ body.blog
 		padding-top: 0
 	&-banner
 		background-size cover 
-		background-position center -140px
+		background-position center center
 		background-repeat no-repeat
 		height 30vh
 		position relative
@@ -1203,7 +1203,10 @@ body.blog
 			left 1rem
 			bottom: 0
 			padding: .2rem 1rem;
-
+@media screen and (min-width:1000px)
+	.package
+		&-banner
+			background-position center -140px
 .search 
 	.search-submit
 		margin-top 1rem
