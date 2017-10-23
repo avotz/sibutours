@@ -1928,6 +1928,12 @@ section.error-404 {
   -ms-filter: none;
   filter: none;
 }
+.fp-viewing-vacations-package-vacations-package .home-tripadvisor,
+.fp-viewing-water-tours-discover .home-tripadvisor,
+.fp-viewing-volcanoes-discover .home-tripadvisor,
+.fp-viewing-adventure-discover .home-tripadvisor {
+  display: none;
+}
 .slide__title-spacer {
   margin-top: 88px;
   overflow: hidden;
@@ -2906,7 +2912,7 @@ body.blog {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
-  background-position: center center;
+  background-position: top center;
   background-repeat: no-repeat;
   height: 30vh;
   position: relative;
