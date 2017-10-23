@@ -2082,6 +2082,13 @@ section.error-404 {
   .tours__grid li {
     width: 50%;
   }
+  .tours__grid li.full {
+    width: 100%;
+    height: 40vh;
+  }
+  .tours__grid li.full figure {
+    height: 40vh;
+  }
   .slide__content {
     margin-left: 200px;
   }
@@ -2541,6 +2548,7 @@ section.error-404 {
   display: block !important;
   font-size: 3rem;
   margin-bottom: 0;
+  line-height: 42px;
 }
 .page-category-wc a {
   color: #333;
@@ -2557,10 +2565,12 @@ section.error-404 {
   margin-bottom: 1rem;
 }
 @media screen and (max-width: 1000px) {
-  .tax-product_cat .slide__category {
+  .tax-product_cat .slide__category,
+  .post-type-archive-vacations-package .slide__category {
     padding-top: 2rem;
   }
-  .tax-product_cat .slide__title-spacer {
+  .tax-product_cat .slide__title-spacer,
+  .post-type-archive-vacations-package .slide__title-spacer {
     display: none;
   }
 }

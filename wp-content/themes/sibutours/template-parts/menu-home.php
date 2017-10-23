@@ -17,8 +17,10 @@
                                     
                                 ) );
                                 
-                             foreach ($categories as $key => $category) {  ?>
-                                
+                             foreach ($categories as $key => $category) { 
+                                $lastKey = $key+2;
+                                 ?>
+                               
                                 <?php if(wp_is_mobile()){?>
                                     <li class="main__menu__item" data-goto="<?php echo $key+2 ?>"><a href="/tour-category/<?php echo $category->slug ?>"><?php echo $category->name ?></a></li>
                                    <?php }else{ ?>
@@ -29,7 +31,11 @@
                                 
                                 <!-- <li class="main__menu__item" data-goto="3">Nature & Cultural</li>
                                 <li class="main__menu__item" data-goto="4">Water</li> -->
-                                
+                                <?php if(wp_is_mobile()){?>
+                                    <li class="main__menu__item" data-goto="<?php echo $lastKey+2 ?>"><a href="/vacations-package">Vacations package</a></li>
+                                   <?php }else{ ?>
+                                         <li class="main__menu__item" data-goto="<?php echo $lastKey+2 ?>">Vacations package</li>
+                               <?php   } ?>
                             </ul>
                         </div>
                     </div>
@@ -46,14 +52,21 @@
                                     
                                 ) );
                                 
-                             foreach ($categories as $key => $category) {  ?>
-                               
+                             foreach ($categories as $key => $category) {  
+                                $lastKey = $key+2;
+                                 ?>
+                                    
                                   <?php if(wp_is_mobile()){?>
                                     <li class="main__menu__item" data-goto="<?php echo $key+2 ?>"><a href="/tour-category/<?php echo $category->slug ?>"><?php echo $category->name ?></a></li>
                                    <?php }else{ ?>
                                          <li class="main__menu__item" data-goto="<?php echo $key+2 ?>"><?php echo $category->name ?></li>
                                <?php   }
                              } ?>
+                               <?php if(wp_is_mobile()){?>
+                                    <li class="main__menu__item" data-goto="<?php echo $lastKey+1 ?>"><a href="/vacations-package">Vacations package</a></li>
+                                   <?php }else{ ?>
+                                         <li class="main__menu__item" data-goto="<?php echo $lastKey+1 ?>">Vacations package</li>
+                               <?php   } ?>
                             </ul>
                         </div>
                     </div>
@@ -97,6 +110,18 @@
                                     <div class="fp-controlArrow fp-next"></div>
                                  </li>
                             <?php } ?>
+                            <li class="main__menu__item">
+                                    <a href="/vacations-package">
+                                       <?php  if(get_locale() == "es_ES"){?>
+                                        Paquetes de vacaciones
+                                       <?php } if(get_locale() == "en_US") {?>
+                                        Vacations Package
+                                       <?php } if(get_locale() == "fr_FR") {?>
+                                        Forfait vacances
+                                        <?php } ?>
+                                      </a>
+                                    <div class="fp-controlArrow fp-next"></div>
+                                 </li>
                                 
                                
                                
