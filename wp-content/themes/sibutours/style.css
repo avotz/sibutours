@@ -2120,7 +2120,8 @@ section.error-404 {
 			background-position 50% 50%
 			height 300px
 			width 100%*/
-.woocommerce-page .fp-controlArrow {
+.woocommerce-page .fp-controlArrow,
+.post-type-archive-vacations-package .fp-controlArrow {
   display: none;
 }
 @media screen and (min-width: 1000px) {
