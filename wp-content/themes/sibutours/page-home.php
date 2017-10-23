@@ -251,7 +251,7 @@ get_header(); ?>
                                                                                  <?php the_title(); ?>
                                                                                 </small>
                                                                                 <h4>
-                                                                                <a href="<?php the_permalink(); ?>" title="Vacations Packages">Vacations Packages</a>
+                                                                                <a href="<?php the_permalink(); ?>" title="Vacations Package">Vacations Package</a>
                                                                                 </h4>
                                                                                 </div>
                                                                                 </div>
