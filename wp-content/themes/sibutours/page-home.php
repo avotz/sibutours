@@ -203,7 +203,11 @@ get_header(); ?>
                                                      <div class="slide__title-spacer"></div>
                                                      <div class="slide__content">
                                                         <h2 class="entry-title page-header"><a href="#">Vacations Packages</a></h2>
-                                                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto molestiae id eum cupiditate deleniti fugiat dicta mollitia quidem tempora! Quae dignissimos similique iure fugiat ullam temporibus, at provident vel velit!</p>  
+                                                         <p>Costa Rica, located in the beautiful tropics just 9.5 degrees north from the Equator. Offers you from Coffee plantations, marine turtles, exotic birds, rain forest, hiking, white water rafting, actives volcanoes, beautiful beaches, fishing and much more.</p> 
+                                                        <p>Sibu Tours has prepare two different customized packages deal for you to experience the vacation of your life time.
+                                                        </p>
+                                                        <p>
+                                                        We like to invite you to take a look to these amazing and fun packages. We also invite to write us for any question or request that you may have. We will be glad to make it happen.</p>  
                                                         
                                                         
                                                      </div>
