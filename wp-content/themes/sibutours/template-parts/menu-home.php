@@ -32,9 +32,9 @@
                                 <!-- <li class="main__menu__item" data-goto="3">Nature & Cultural</li>
                                 <li class="main__menu__item" data-goto="4">Water</li> -->
                                 <?php if(wp_is_mobile()){?>
-                                    <li class="main__menu__item" data-goto="<?php echo $lastKey+2 ?>"><a href="/vacations-package">Vacations package</a></li>
+                                    <li class="main__menu__item" data-goto="<?php echo $lastKey+2 ?>"><a href="/vacation-package">Vacation packages</a></li>
                                    <?php }else{ ?>
-                                         <li class="main__menu__item" data-goto="<?php echo $lastKey+2 ?>">Vacations package</li>
+                                         <li class="main__menu__item" data-goto="<?php echo $lastKey+2 ?>">Vacation packages</li>
                                <?php   } ?>
                             </ul>
                         </div>
@@ -63,9 +63,9 @@
                                <?php   }
                              } ?>
                                <?php if(wp_is_mobile()){?>
-                                    <li class="main__menu__item" data-goto="<?php echo $lastKey+1 ?>"><a href="/vacations-package">Vacations package</a></li>
+                                    <li class="main__menu__item" data-goto="<?php echo $lastKey+1 ?>"><a href="/vacation-package">Vacation packages</a></li>
                                    <?php }else{ ?>
-                                         <li class="main__menu__item" data-goto="<?php echo $lastKey+1 ?>">Vacations package</li>
+                                         <li class="main__menu__item" data-goto="<?php echo $lastKey+1 ?>">Vacation packages</li>
                                <?php   } ?>
                             </ul>
                         </div>
@@ -111,11 +111,11 @@
                                  </li>
                             <?php } ?>
                             <li class="main__menu__item">
-                                    <a href="/vacations-package">
+                                    <a href="/vacation-package">
                                        <?php  if(get_locale() == "es_ES"){?>
-                                        Paquetes de vacaciones
+                                        Paquete de vacaciones
                                        <?php } if(get_locale() == "en_US") {?>
-                                        Vacations Package
+                                        Vacation Packages
                                        <?php } if(get_locale() == "fr_FR") {?>
                                         Forfait vacances
                                         <?php } ?>

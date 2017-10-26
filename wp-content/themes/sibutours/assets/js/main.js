@@ -261,7 +261,7 @@ $(".owl-carousel").owlCarousel({
     }
     function isPackage() {
         
-        return ($('body').hasClass('single-format-standard') || $('body').hasClass('vacations-package-template-default'));
+        return ($('body').hasClass('single-format-standard') || $('body').hasClass('vacation-package-template-default') || $('body').hasClass('vacations-package-template-default'));
         
     }
    $main__menu__wrapper.on('click', '.main__menu__item', function(e) {

@@ -17,7 +17,7 @@ get_header(); ?>
             <div class="column column-2">
                  <div class="slide__title-spacer"></div>
                  <div class="slide__content">
-                    <h2 class="entry-title page-header page-category-wc"><a href="#">Vacations Packages</a></h2>
+                    <h2 class="entry-title page-header page-category-wc"><a href="#">Vacation Packages</a></h2>
                     <p>Costa Rica, located in the beautiful tropics just 9.5 degrees north from the Equator. Offers you from Coffee plantations, marine turtles, exotic birds, rain forest, hiking, white water rafting, actives volcanoes, beautiful beaches, fishing and much more.</p> 
                     <p>Sibu Tours has prepare two different customized packages deal for you to experience the vacation of your life time.
                     </p>
@@ -30,7 +30,7 @@ get_header(); ?>
                  <ul class="tours__grid">
                      <?php
                         $args = array(
-                          'post_type' => 'vacations-package',
+                          'post_type' => 'vacation-package',
                           //'order' => 'ASC',
                           'orderby' => array('menu_order' => 'ASC', 'title' => 'ASC'),
                           'posts_per_page' => -1,
@@ -69,7 +69,7 @@ get_header(); ?>
                                              <?php the_title(); ?>
                                             </small>
                                             <h4>
-                                            <a href="<?php the_permalink(); ?>" title="Vacations Package">Vacations Package</a>
+                                            <a href="<?php the_permalink(); ?>" title="Vacations Package">Vacation Packages</a>
                                             </h4>
                                             </div>
                                             </div>

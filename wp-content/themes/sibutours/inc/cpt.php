@@ -29,7 +29,7 @@ function sibutours_register_meta_boxes( $meta_boxes ) {
     $meta_boxes[] = array(
         'id'         => 'additional',
         'title'      => __( 'Additional Information', 'sibutours' ),
-        'post_types' => array( 'vacations-package'),
+        'post_types' => array( 'vacation-package'),
         'context'    => 'normal',
         'priority'   => 'high',
         'fields' => array(

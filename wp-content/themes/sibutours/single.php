@@ -11,7 +11,7 @@ get_header(); ?>
 
 	<main class="main">
 		<div class="inner">
-		<?php if ( get_post_type( $post ) == 'vacations-package' ) :  ?>
+		<?php if ( get_post_type( $post ) == 'vacation-package' ) :  ?>
 					<div class="package-container">
 						<div class="package-info">
 								<?php

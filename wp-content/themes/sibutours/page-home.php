@@ -187,7 +187,7 @@ get_header(); ?>
 
                             
                     <?php } ?>
-                    <div class="section" id="section-<?php echo $lastKey+1 ?>" data-anchor="vacations-package">
+                    <div class="section" id="section-<?php echo $lastKey+1 ?>" data-anchor="vacation-packages">
                                 
                               <!-- <div class="section__bg background-cover" style="background-image: url('<?php echo get_template_directory_uri();  ?>/img/bg-page4.jpg');"></div>-->
 
@@ -196,13 +196,13 @@ get_header(); ?>
                                 </div>
                                
                                 
-                               <div class="slide slide-2 slide__category " data-anchor="vacations-package" >
+                               <div class="slide slide-2 slide__category " data-anchor="vacation-packages" >
                                      <div class="slide__container">
                                             <div class="row">
                                                 <div class="column column-2">
                                                      <div class="slide__title-spacer"></div>
                                                      <div class="slide__content">
-                                                        <h2 class="entry-title page-header"><a href="#">Vacations Packages</a></h2>
+                                                        <h2 class="entry-title page-header"><a href="#">Vacation Packages</a></h2>
                                                          <p>Costa Rica, located in the beautiful tropics just 9.5 degrees north from the Equator. Offers you from Coffee plantations, marine turtles, exotic birds, rain forest, hiking, white water rafting, actives volcanoes, beautiful beaches, fishing and much more.</p> 
                                                         <p>Sibu Tours has prepare two different customized packages deal for you to experience the vacation of your life time.
                                                         </p>
@@ -216,7 +216,7 @@ get_header(); ?>
                                                      <ul class="tours__grid">
                                                          <?php
                                                             $args = array(
-                                                              'post_type' => 'vacations-package',
+                                                              'post_type' => 'vacation-package',
                                                               //'order' => 'ASC',
                                                               'orderby' => array('menu_order' => 'ASC', 'title' => 'ASC'),
                                                               'posts_per_page' => -1,
@@ -255,7 +255,7 @@ get_header(); ?>
                                                                                  <?php the_title(); ?>
                                                                                 </small>
                                                                                 <h4>
-                                                                                <a href="<?php the_permalink(); ?>" title="Vacations Package">Vacations Package</a>
+                                                                                <a href="<?php the_permalink(); ?>" title="Vacation Packages">Vacation Packages</a>
                                                                                 </h4>
                                                                                 </div>
                                                                                 </div>
