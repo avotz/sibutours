@@ -256,7 +256,7 @@ $(".owl-carousel").owlCarousel({
     }
     function isBlog() {
         
-        return ($('body').hasClass('single-format-standard') || $('body').hasClass('blog'));
+        return ($('body').hasClass('single-format-standard') || $('body').hasClass('blog') || $('body').hasClass('archive') || $('body').hasClass('search'));
         
     }
     function isPackage() {
