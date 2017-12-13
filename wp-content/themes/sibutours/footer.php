@@ -62,5 +62,26 @@
 
 <?php wp_footer(); ?>
 
+<script>
+ 
+    var wpcf7ElmInquire = document.querySelector( '#wpcf7-f32-o2' );
+    var wpcf7ElmContact = document.querySelector( '#wpcf7-f45-p10-o1' ); //form contact
+    
+
+      if(wpcf7ElmContact)
+    {
+          wpcf7ElmContact.addEventListener( 'wpcf7submit', function( event ) {
+            ga('send', 'event', 'Contact Form', 'submit');
+        }, false );
+      }
+       if(wpcf7ElmInquire)
+    {
+          wpcf7ElmContact.addEventListener( 'wpcf7submit', function( event ) {
+            ga('send', 'event', 'Inquire Form', 'submit');
+        }, false );
+      }
+   
+</script>
+
 </body>
 </html>
