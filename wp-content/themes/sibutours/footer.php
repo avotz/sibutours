@@ -64,8 +64,9 @@
 
 <script>
  
-    var wpcf7ElmInquire = document.querySelector( '#wpcf7-f32-o2' );
-    var wpcf7ElmContact = document.querySelector( '#wpcf7-f45-p10-o1' ); //form contact
+    var wpcf7ElmInquireTour = document.querySelector( '#tour-popup div.wpcf7' );
+    var wpcf7ElmInquireTransfer = document.querySelector( '#transfer-popup div.wpcf7' );
+    var wpcf7ElmContact = document.querySelector( '.page-template-page-contact div.wpcf7' ); //form contact
     
 
       if(wpcf7ElmContact)
@@ -74,10 +75,16 @@
             ga('send', 'event', 'Contact Form', 'submit');
         }, false );
       }
-       if(wpcf7ElmInquire)
+       if(wpcf7ElmInquireTour)
     {
-          wpcf7ElmContact.addEventListener( 'wpcf7submit', function( event ) {
-            ga('send', 'event', 'Inquire Form', 'submit');
+          wpcf7ElmInquireTour.addEventListener( 'wpcf7submit', function( event ) {
+            ga('send', 'event', 'Inquire Tour Form', 'submit');
+        }, false );
+      }
+        if(wpcf7ElmInquireTransfer)
+    {
+          wpcf7ElmInquireTransfer.addEventListener( 'wpcf7submit', function( event ) {
+            ga('send', 'event', 'Inquire Transfer Form', 'submit');
         }, false );
       }
    
