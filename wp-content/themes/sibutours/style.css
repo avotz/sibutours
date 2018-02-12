@@ -2773,10 +2773,19 @@ section.error-404 {
 .footer span {
   vertical-align: middle;
 }
+.footer .tripadvisor-marque {
+  position: absolute;
+  right: 0;
+  top: -32px;
+  display: none;
+}
 @media screen and (min-width: 768px) {
   .footer {
     padding: 0.5rem 0;
     text-align: center;
+  }
+  .footer .tripadvisor-marque {
+    display: block;
   }
 }
 .home .footer {
