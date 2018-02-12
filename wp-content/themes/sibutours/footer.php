@@ -19,14 +19,14 @@
             	<a href="<?php echo esc_url( home_url( '/fr' ) ); ?>">FR</a>
             </div>
             <div class="tripadvisor-marque">
-              <div id="TA_cdsscrollingravewide276" class="TA_cdsscrollingravewide">
-              <ul id="h8Uq4UjkG" class="TA_links r8BvqyFveJnc">
-              <li id="UMXNpJxXgqR" class="DhSVRvoe7Z">
-              <a target="_blank" href="http://www.tripadvisor.com/Attraction_Review-g309235-d1772405-Reviews-Sibu_Tours-Province_of_Guanacaste.html"><img src="https://static.tacdn.com/img2/t4b/Stacked_TA_logo.png" alt="TripAdvisor" class="widEXCIMG" id="CDSWIDEXCLOGO"/></a>
+              <div id="TA_cdsscrollingravenarrow630" class="TA_cdsscrollingravenarrow">
+              <ul id="yyl28qjh" class="TA_links 64i66xpNf">
+              <li id="NSAio6u77O" class="g9kMjkrlAm7">
+              <a target="_blank" href="https://www.tripadvisor.com/"><img src="https://static.tacdn.com/img2/t4b/Stacked_TA_logo.png" alt="TripAdvisor" class="widEXCIMG" id="CDSWIDEXCLOGO"/></a>
               </li>
               </ul>
               </div>
-              <script async src="https://www.jscache.com/wejs?wtype=cdsscrollingravewide&amp;uniq=276&amp;locationId=1772405&amp;lang=es_MX&amp;border=true&amp;shadow=false&amp;display_version=2"></script>
+              <script async src="https://www.jscache.com/wejs?wtype=cdsscrollingravenarrow&amp;uniq=630&amp;locationId=1772405&amp;lang=en_US&amp;border=true&amp;display_version=2"></script>
             </div>
     </footer>
 
