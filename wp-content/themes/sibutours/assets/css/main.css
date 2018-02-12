@@ -2795,6 +2795,9 @@ section.error-404 {
 .home .footer span {
   display: none;
 }
+.home .footer .tripadvisor-marque {
+  display: none !important;
+}
 .hide-for-small-only {
   opacity: 0;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
